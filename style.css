@@ -1,0 +1,422 @@
+/*================================================================================
+  SNS ALBENGA - CSS PRINCIPALE
+  Descrizione:
+  Questo file gestisce lo stile della homepage della Sezione SNS Albenga.
+  Include Hero Section, Corsi, Dettagli corsi, Perché SNS, Ordinanze, About,
+  Contatti e Footer.
+================================================================================*/
+
+/*================================================================================
+  RESET BASE
+================================================================================*/
+* {
+    margin: 0; /* rimuove margini di default */
+    padding: 0; /* rimuove padding di default */
+    box-sizing: border-box; /* include padding e bordo nelle dimensioni dell'elemento */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* font principale */
+    line-height: 1.6; /* altezza linea leggibile */
+    background-color: #ffffff; /* sfondo bianco */
+    color: #333; /* colore testo principale */
+}
+
+/*================================================================================
+  LINK
+================================================================================*/
+a {
+    text-decoration: none; /* rimuove sottolineatura */
+    color: #0288d1; /* colore link blu */
+}
+
+a:hover {
+    text-decoration: underline; /* sottolineatura al passaggio */
+}
+
+/*================================================================================
+  BOTTONI
+================================================================================*/
+.btn-primary,
+.btn-secondary {
+    display: inline-block; /* comporta come bottone */
+    padding: 12px 25px; /* spazio interno */
+    margin: 5px; /* margine esterno tra bottoni */
+    border-radius: 5px; /* angoli arrotondati */
+    font-weight: bold; /* testo in grassetto */
+    transition: all 0.3s ease; /* transizione animata */
+    text-align: center; /* testo centrato */
+}
+
+.btn-primary {
+    background-color: #0288d1; /* sfondo blu principale */
+    color: white; /* testo bianco */
+}
+
+.btn-primary:hover {
+    background-color: #01579b; /* blu scuro al passaggio */
+}
+
+.btn-secondary {
+    background-color: #81d4fa; /* azzurro chiaro */
+    color: white; /* testo bianco */
+}
+
+.btn-secondary:hover {
+    background-color: #0288d1; /* cambia in blu principale */
+}
+
+/*================================================================================
+  HERO SECTION
+================================================================================*/
+.hero {
+    position: relative; /* per overlay */
+    display: flex; /* layout flessibile */
+    flex-wrap: wrap; /* consente di andare a capo */
+    align-items: center; /* centrato verticalmente */
+    justify-content: center; /* centrato orizzontalmente */
+    padding: 80px 20px; /* spazio interno */
+    text-align: center; /* testo centrato */
+    color: white; /* testo bianco */
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; /* immagine di sfondo centrata e coprente */
+}
+
+.hero::before {
+    content: ''; /* elemento pseudo */
+    position: absolute; /* posizione assoluta */
+    inset: 0; /* copre tutto il contenitore */
+    background-color: rgba(0, 95, 115, 0.6); /* overlay semitrasparente blu */
+    z-index: 1; /* dietro al testo */
+}
+
+.hero-text {
+    position: relative; /* necessario sopra overlay */
+    z-index: 2; /* davanti all'overlay */
+    flex: 1 1 400px; /* flessibilità per dimensione minima */
+    padding: 20px; /* spazio interno */
+}
+
+.hero-text h1 {
+    font-size: 2.8rem; /* dimensione titolo grande */
+    margin-bottom: 20px; /* spazio sotto */
+}
+
+.hero-text p {
+    font-size: 1.2rem; /* dimensione testo normale */
+    margin-bottom: 20px; /* spazio sotto */
+}
+
+.hero-buttons {
+    display: flex; /* layout flessibile */
+    justify-content: center; /* centrato orizzontalmente */
+    gap: 15px; /* spazio tra bottoni */
+    margin-bottom: 15px; /* margine inferiore */
+}
+
+.hero-text a {
+    color: #ffffff; /* link bianco */
+    text-decoration: underline; /* sottolineatura */
+}
+
+.hero-text a:hover {
+    color: #e0e0e0; /* leggermente più chiaro al passaggio */
+}
+
+/*================================================================================
+  SEZIONI GENERALI
+================================================================================*/
+section {
+    padding: 50px 20px; /* spazio interno generale */
+}
+
+section:nth-child(even) {
+    background-color: #e0f0fa; /* sfondo azzurro chiaro alternato */
+}
+
+h2 {
+    font-size: 2rem; /* dimensione titolo sezione */
+    text-align: center; /* centrato */
+    margin-bottom: 40px; /* margine inferiore */
+    color: #0288d1; /* colore blu titolo */
+}
+
+/*================================================================================
+  CORSI
+================================================================================*/
+.course-list {
+    display: flex; /* layout flessibile */
+    flex-wrap: wrap; /* consente di andare a capo */
+    justify-content: space-around; /* distribuzione orizzontale */
+    gap: 20px; /* spazio tra corsi */
+}
+
+.course-item {
+    background-color: white; /* sfondo bianco */
+    flex: 1 1 250px; /* dimensione minima e flessibile */
+    border-radius: 10px; /* angoli arrotondati */
+    padding: 20px; /* spazio interno */
+    text-align: center; /* testo centrato */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animazione hover */
+}
+
+.course-item:hover {
+    transform: translateY(-5px); /* solleva leggermente */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* ombra al passaggio */
+}
+
+.course-item i {
+    color: #0288d1; /* colore icona blu */
+    margin-bottom: 15px; /* margine sotto icona */
+    transition: transform 0.3s ease; /* animazione hover */
+}
+
+.icon-animate:hover {
+    transform: rotate(15deg); /* rotazione icona */
+}
+
+/*================================================================================
+  CARD DETTAGLI CORSI
+================================================================================*/
+.course-details .card {
+    display: flex; /* layout flessibile orizzontale */
+    background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* sfondo bianco->azzurro chiaro */
+    border-radius: 10px; /* angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* leggera ombra */
+    margin: 20px auto; /* margine verticale e centrato */
+    max-width: 1200px; /* larghezza massima */
+    overflow: hidden; /* niente overflow */
+    flex-wrap: wrap; /* rende responsive su schermi piccoli */
+}
+
+.card-icon {
+    display: flex; /* layout flessibile */
+    justify-content: center; /* centrato orizzontalmente */
+    align-items: center; /* centrato verticalmente */
+    background: linear-gradient(to bottom, #ffffff, #0288d1); /* sfumato bianco->blu */
+    color: white; /* colore icona */
+    width: 40%; /* 40% della card */
+    min-height: 200px; /* altezza minima per uniformità */
+}
+
+.card-icon i {
+    font-size: 4rem; /* dimensione icona */
+}
+
+.card-body {
+    display: flex; /* layout flessibile verticale */
+    flex-direction: column; /* elementi uno sotto l'altro */
+    justify-content: flex-start; /* allinea in alto */
+    align-items: flex-start; /* testo allineato a sinistra */
+    padding: 25px; /* spazio interno maggiore */
+    width: 60%; /* 60% della card */
+    color: #333; /* colore testo */
+    line-height: 1.5; /* migliore leggibilità */
+}
+
+.card-body h3 {
+    font-size: 1.5rem; /* dimensione sottotitolo */
+    color: #0288d1; /* blu */
+    margin-top: 20px; /* spazio sopra */
+    margin-bottom: 10px; /* spazio sotto */
+}
+
+.card-body ul {
+    list-style: none; /* rimuove punti elenco */
+    padding-left: 0; /* niente padding */
+    margin-top: 10px; /* margine sopra */
+    margin-bottom: 15px; /* margine sotto lista */
+}
+
+.card-body li {
+    margin-bottom: 10px; /* spazio tra elementi lista */
+}
+
+.card-body p {
+    margin-top: 10px; /* spazio sopra paragrafo */
+    margin-bottom: 10px; /* spazio sotto paragrafo */
+    color: #333; /* colore testo */
+    font-size: 1rem; /* dimensione testo */
+    text-align: left; /* allineamento a sinistra */
+}
+
+/*================================================================================
+  PERCHÉ SNS
+================================================================================*/
+.why-sns ul {
+    list-style: none; /* rimuove punti elenco */
+    max-width: 700px; /* larghezza massima */
+    margin: 0 auto; /* centrato */
+    padding-left:0; /* niente padding */
+}
+
+.why-sns li {
+    font-size: 1.2rem; /* dimensione testo */
+    margin-bottom: 15px; /* spazio tra elementi */
+    position: relative; /* necessario per icona pseudo */
+    padding-left: 2rem; /* spazio per icona */
+}
+
+.why-sns li::before {
+    content: "\f058"; /* icona check FontAwesome */
+    font-family: "Font Awesome 5 Free"; /* font icona */
+    font-weight: 900; /* peso icona */
+    position: absolute; /* posizione assoluta */
+    left: 0; /* allinea a sinistra */
+    color: #0288d1; /* colore blu */
+}
+
+/*================================================================================
+  ORDINANZE
+================================================================================*/
+.ordinanze {
+    text-align: center; /* testo centrato */
+}
+
+.ordinanze p {
+    margin-top: 15px; /* margine superiore */
+    font-size: 1rem; /* dimensione testo */
+}
+
+/*================================================================================
+  ABOUT
+================================================================================*/
+.about p {
+    max-width: 700px; /* larghezza massima */
+    margin: 15px auto; /* centrato e margine verticale */
+    font-size: 1.1rem; /* dimensione testo */
+}
+
+.center-buttons {
+    display: flex; /* layout flessibile */
+    justify-content: center; /* centrato */
+    gap: 20px; /* spazio tra bottoni */
+    margin-top: 20px; /* margine superiore */
+}
+
+/*================================================================================
+  CONTATTI
+================================================================================*/
+.contact form {
+    max-width: 600px; /* larghezza massima form */
+    margin: 0 auto; /* centrato */
+    display: flex; /* layout flessibile */
+    flex-direction: column; /* verticale */
+    gap: 15px; /* spazio tra elementi */
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+    padding: 12px; /* spazio interno */
+    border-radius: 5px; /* angoli arrotondati */
+    border: 1px solid #ccc; /* bordo grigio chiaro */
+    font-size: 1rem; /* dimensione testo */
+    width: 100%; /* larghezza completa */
+}
+
+.contact textarea {
+    min-height: 120px; /* altezza minima */
+    resize: vertical; /* ridimensionabile verticalmente */
+}
+
+.privacy-label {
+    display: flex; /* layout flessibile */
+    flex-direction: column; /* verticale */
+    align-items: flex-start; /* allineato a sinistra */
+    gap: 5px; /* spazio tra testo e checkbox */
+    font-size: 0.9rem; /* dimensione testo piccolo */
+}
+
+.privacy-label input[type="checkbox"] {
+    width: 18px; /* dimensione checkbox */
+    height: 18px; 
+}
+
+.contact button {
+    background-color: #0288d1; /* blu */
+    color: white; /* testo bianco */
+    padding: 12px; /* spazio interno */
+    border: none; /* nessun bordo */
+    border-radius: 5px; /* angoli arrotondati */
+    cursor: pointer; /* puntatore */
+    font-weight: bold; /* testo grassetto */
+    transition: background 0.3s ease; /* transizione hover */
+}
+
+.contact button:hover {
+    background-color: #01579b; /* blu scuro al passaggio */
+}
+
+/*================================================================================
+  FOOTER
+================================================================================*/
+footer {
+    background-color: #01579b; /* blu scuro */
+    color: white; /* testo bianco */
+    display: flex; /* layout flessibile */
+    flex-wrap: wrap; /* va a capo se necessario */
+    justify-content: space-around; /* spazio tra colonne */
+    padding: 40px 20px; /* padding verticale e orizzontale */
+    gap: 20px; /* spazio tra colonne */
+}
+
+footer h3 {
+    margin-bottom: 10px; /* margine sotto titoli */
+}
+
+footer a {
+    color: white; /* link bianco */
+}
+
+footer a:hover {
+    text-decoration: underline; /* sottolineatura hover */
+}
+
+.footer-privacy {
+    text-align: center;       /* Centra il testo */
+    font-size: 0.8rem;        /* Testo più piccolo */
+    margin-top: 20px;         /* Spazio sopra */
+    color: #ffffff;           /* Testo bianco */
+}
+
+
+/*================================================================================
+  RESPONSIVE
+================================================================================*/
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 20px; /* ridotto su mobile */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* titolo più piccolo */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* testo più piccolo */
+    }
+
+    .course-list,
+    .hero-buttons,
+    .center-buttons {
+        flex-direction: column; /* verticale */
+        gap: 10px; /* spazio ridotto */
+    }
+
+    .course-details .card {
+        flex-direction: column; /* verticale */
+        align-items: center; /* centrato */
+    }
+
+  .course-details .card {
+        flex-direction: column; /* verticalizza la card */
+    }
+    .card-icon, .card-body {
+        width: 100%; /* occupano tutta la larghezza */
+    }
+    .card-icon {
+        min-height: 150px; /* altezza ridotta per mobile */
+    }
+}
+
