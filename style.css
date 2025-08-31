@@ -439,5 +439,13 @@ footer a:hover {
     .card-icon {
         min-height: 150px; /* altezza ridotta per mobile */
     }
+
+    .why-sns ul {
+        list-style: none; /* rimuove punti elenco */
+        max-width: 700px; /* larghezza massima */
+        margin: 0 auto; /* centrato */
+        padding-left: 30px; /* sposta leggermente a destra */
+    }
+
 }
 
