@@ -27,7 +27,7 @@ body {
 ================================================================================*/
 a {
     text-decoration: none; /* rimuove sottolineatura */
-    color: #0288d1; /* colore link blu */
+    color: #196d65; /* colore link blu */
 }
 
 a:hover {
@@ -49,21 +49,21 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #0288d1; /* sfondo blu principale */
+    background-color: #4DB6AC; /* sfondo blu principale */
     color: white; /* testo bianco */
 }
 
 .btn-primary:hover {
-    background-color: #01579b; /* blu scuro al passaggio */
+    background-color: #B0D9D9; /* blu scuro al passaggio */
 }
 
 .btn-secondary {
-    background-color: #81d4fa; /* azzurro chiaro */
+    background-color: #4DB6AC; /* azzurro chiaro */
     color: white; /* testo bianco */
 }
 
 .btn-secondary:hover {
-    background-color: #0288d1; /* cambia in blu principale */
+    background-color: #B0D9D9; /* cambia in blu principale */
 }
 
 /*================================================================================
@@ -130,14 +130,14 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: #e0f0fa; /* sfondo azzurro chiaro alternato */
+    background-color: #c5e4e4; /* sfondo azzurro chiaro alternato */
 }
 
 h2 {
     font-size: 2rem; /* dimensione titolo sezione */
     text-align: center; /* centrato */
     margin-bottom: 40px; /* margine inferiore */
-    color: #0288d1; /* colore blu titolo */
+    color: #196d65; /* colore blu titolo */
 }
 
 /*================================================================================
@@ -164,10 +164,12 @@ h2 {
 .course-item:hover {
     transform: translateY(-5px); /* solleva leggermente */
     box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* ombra al passaggio */
+    background-color: #c5e4e4; /* azzurro al passaggio */
+    text-decoration: none; /* conferma niente sottolineature */
 }
 
 .course-item i, .course-item h3 {
-    color: #0288d1; /* colore blu */
+    color: #4DB6AC; /* colore blu */
     margin-bottom: 1 rem; /* margine sotto icona */
     transition: transform 0.3s ease; /* animazione hover */
 }
@@ -186,7 +188,7 @@ h2 {
 ================================================================================*/
 .course-details .card {
     display: flex; /* layout flessibile orizzontale */
-    background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* sfondo bianco->azzurro chiaro */
+    background: linear-gradient(to bottom, #ffffff, #c5e4e4); /* sfondo bianco->azzurro chiaro */
     border-radius: 10px; /* angoli arrotondati */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* leggera ombra */
     margin: 20px auto; /* margine verticale e centrato */
@@ -199,7 +201,7 @@ h2 {
     display: flex; /* layout flessibile */
     justify-content: center; /* centrato orizzontalmente */
     align-items: center; /* centrato verticalmente */
-    background: linear-gradient(to bottom, #ffffff, #0288d1); /* sfumato bianco->blu */
+    background: linear-gradient(to bottom, #ffffff, #4DB6AC); /* sfumato bianco->blu */
     color: white; /* colore icona */
     width: 40%; /* 40% della card */
     min-height: 200px; /* altezza minima per uniformità */
@@ -222,7 +224,7 @@ h2 {
 
 .card-body h3 {
     font-size: 1.5rem; /* dimensione sottotitolo */
-    color: #0288d1; /* blu */
+    color: #4DB6AC; /* blu */
     margin-top: 20px; /* spazio sopra */
     margin-bottom: 10px; /* spazio sotto */
 }
@@ -253,7 +255,7 @@ h2 {
     list-style: none; /* rimuove punti elenco */
     max-width: 700px; /* larghezza massima */
     margin: 0 auto; /* centrato */
-    padding-left:0; /* niente padding */
+    padding-left: 4rem; /* sposta leggermente a destra */
 }
 
 .why-sns li {
@@ -269,7 +271,7 @@ h2 {
     font-weight: 900; /* peso icona */
     position: absolute; /* posizione assoluta */
     left: 0; /* allinea a sinistra */
-    color: #0288d1; /* colore blu */
+    color: #ffffff; /* colore blu */
 }
 
 /*================================================================================
@@ -340,7 +342,7 @@ h2 {
 }
 
 .contact button {
-    background-color: #0288d1; /* blu */
+    background-color: #4DB6AC; /* blu */
     color: white; /* testo bianco */
     padding: 12px; /* spazio interno */
     border: none; /* nessun bordo */
@@ -351,14 +353,14 @@ h2 {
 }
 
 .contact button:hover {
-    background-color: #01579b; /* blu scuro al passaggio */
+    background-color: #196d65; /* blu scuro al passaggio */
 }
 
 /*================================================================================
   FOOTER
 ================================================================================*/
 footer {
-    background-color: #01579b; /* blu scuro */
+    background-color: #196d65; /* blu scuro */
     color: white; /* testo bianco */
     display: flex; /* layout flessibile */
     flex-wrap: wrap; /* va a capo se necessario */
@@ -409,6 +411,18 @@ footer a:hover {
     .center-buttons {
         flex-direction: column; /* verticale */
         gap: 10px; /* spazio ridotto */
+    }
+
+    .course-list {
+        flex-direction: column; /* le card in colonna */
+        align-items: center; /* centrate */
+    }
+
+    .course-item {
+        max-height: 350px; /* altezza massima */
+        overflow: auto; /* se il contenuto è troppo lungo si può scrollare */
+        flex: 1 1 90%; /* larghezza quasi piena */
+        padding: 15px; /* meno padding per mobile */
     }
 
     .course-details .card {
