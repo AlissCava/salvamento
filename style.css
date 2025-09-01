@@ -96,6 +96,22 @@ a:hover {
     padding: 20px; /* spazio interno */
 }
 
+.hero-logos {
+    display: flex;               /* layout orizzontale */
+    justify-content: center;     /* centrati nella pagina */
+    align-items: center;         /* centrati verticalmente */
+    gap: 30px;                   /* spazio tra i loghi */
+    width: 100%;                 /* prendono tutta la larghezza */
+    margin-bottom: 40px;         /* spazio sotto i loghi */
+    position: relative;          /* rimane nel flusso ma sopra overlay */
+    z-index: 5;                  /* sopra overlay (1) e testo (2) */
+}
+
+.hero-logos img {
+    max-height: 9rem;            /* altezza massima dei loghi */
+    object-fit: contain;         /* mantiene proporzioni */
+}
+
 .hero-text h1 {
     font-size: 2.8rem; /* dimensione titolo grande */
     margin-bottom: 20px; /* spazio sotto */
@@ -365,8 +381,9 @@ footer {
     display: flex; /* layout flessibile */
     flex-wrap: wrap; /* va a capo se necessario */
     justify-content: space-around; /* spazio tra colonne */
-    padding: 40px 20px; /* padding verticale e orizzontale */
+    padding: 60px 20px 20px; /* padding verticale più grande sopra per loghi */
     gap: 20px; /* spazio tra colonne */
+    position: relative; /* necessario per posizionare loghi sopra */
 }
 
 footer h3 {
@@ -375,18 +392,38 @@ footer h3 {
 
 footer a {
     color: white; /* link bianco */
+    text-decoration: none; /* rimuove sottolineature */
 }
 
 footer a:hover {
-    text-decoration: underline; /* sottolineatura hover */
+    color: #81d4fa; /* azzurro chiaro al passaggio */
+    text-decoration: none; /* niente sottolineatura hover */
 }
 
-.footer-privacy {
-    text-align: center;       /* Centra il testo */
-    font-size: 0.8rem;        /* Testo più piccolo */
-    margin-top: 20px;         /* Spazio sopra */
-    color: #ffffff;           /* Testo bianco */
+/* Loghi sopra il footer */
+.footer-logos {
+    display: flex;               /* layout orizzontale */
+    justify-content: center;     /* centrati nella pagina */
+    align-items: center;         /* centrati verticalmente */
+    gap: 30px;                   /* spazio tra loghi */
+    width: 100%;                /* prendono tutta la larghezza */
 }
+
+.footer-logos img {
+    max-height: 9rem;            /* altezza massima dei loghi */
+    object-fit: contain;         /* mantiene proporzioni */
+}
+
+/* Privacy */
+.footer-privacy {
+    background-color: #196d65 !important;  /* stesso colore del footer */
+    text-align: center;          /* centra il testo */
+    font-size: 0.8rem;           /* testo più piccolo */
+    margin-top: 60px;            /* spazio sufficiente dai loghi */
+    color: #ffffff;              /* testo bianco */
+    width: 100%;                 /* larghezza totale */
+}
+
 
 
 /*================================================================================
