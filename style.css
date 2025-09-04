@@ -85,7 +85,7 @@ a:hover {
     content: ''; /* elemento pseudo */
     position: absolute; /* posizione assoluta */
     inset: 0; /* copre tutto il contenitore */
-    background-color: rgba(0, 95, 115, 0.6); /* overlay semitrasparente blu */
+    background-color: rgba(0, 95, 115, 0.3); /* overlay semitrasparente blu */
     z-index: 1; /* dietro al testo */
 }
 
