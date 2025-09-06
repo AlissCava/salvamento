@@ -250,24 +250,25 @@ Modulo contatti con campi obbligatori, selezione interesse e checkbox privacy.
 -->
 <section class="contact" id="contatti">
     <h2>Contattaci</h2>
-    <form>
+    <form action="mailto:cavalleraalissa@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="nome" placeholder="Nome" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="tel" name="telefono" placeholder="Telefono">
         <select name="interesse" required>
-            <option value="">Seleziona Interesse</option>
+            <option value="" disabled selected>Seleziona Interesse</option>
             <option value="corso">Corso</option>
             <option value="rinnovo">Rinnovo</option>
             <option value="aziende">Info Aziende/Scuole</option>
         </select>
         <textarea name="messaggio" placeholder="Messaggio" required></textarea>
         <label class="privacy-label">
-            <span>Acconsento al trattamento dati (privacy)</span>
             <input type="checkbox" required>
+            <span>Acconsento al trattamento dati (privacy)</span>
         </label>
         <button type="submit">Invia</button>
     </form>
 </section>
+
 
 
 <!-- Footer -->
