@@ -1,522 +1,395 @@
 /*================================================================================
-  SNS ALBENGA - CSS PRINCIPALE
-  Descrizione:
-  Questo file gestisce lo stile della homepage della Sezione SNS Albenga.
-  Include Hero Section, Corsi, Dettagli corsi, Perché SNS, Ordinanze, About,
-  Contatti e Footer.
+  SNS ALBENGA - CSS PRINCIPALE (OTTIMIZZATO E COMMENTATO PER RIGA)
 ================================================================================*/
 
-/*================================================================================
-  RESET BASE
-================================================================================*/
-* {
+/* RESET BASE */
+* { 
     margin: 0; /* rimuove margini di default */
     padding: 0; /* rimuove padding di default */
-    box-sizing: border-box; /* include padding e bordo nelle dimensioni dell'elemento */
+    box-sizing: border-box; /* include padding e bordo nelle dimensioni */
 }
 
-body {
+body { 
     font-family: 'Arial', sans-serif; /* font principale */
     line-height: 1.6; /* altezza linea leggibile */
     background-color: #ffffff; /* sfondo bianco */
     color: #333; /* colore testo principale */
 }
 
-/*================================================================================
-  LINK
-================================================================================*/
-a {
+/* LINK */
+a { 
     text-decoration: none; /* rimuove sottolineatura */
-    color: #196d65; /* colore link blu */
+    color: #196d65; /* colore link */
 }
 
-a:hover {
-    text-decoration: underline; /* sottolineatura al passaggio */
+a:hover { 
+    text-decoration: underline; /* sottolineatura hover */
 }
 
-/*================================================================================
-  BOTTONI
-================================================================================*/
-.btn-primary,
-.btn-secondary {
+/* BOTTONI */
+.btn-primary, .btn-secondary { 
     display: inline-block; /* comporta come bottone */
-    padding: 12px 25px; /* spazio interno */
-    margin: 5px; /* margine esterno tra bottoni */
+    padding: 12px 25px; /* padding interno */
+    margin: 5px; /* margine tra bottoni */
     border-radius: 5px; /* angoli arrotondati */
     font-weight: bold; /* testo in grassetto */
-    transition: all 0.3s ease; /* transizione animata */
     text-align: center; /* testo centrato */
+    transition: all 0.3s ease; /* animazione transizione */
+    color: white; /* colore testo */
+    background-color: #4DB6AC; /* colore sfondo */
 }
 
-.btn-primary {
-    background-color: #4DB6AC; /* sfondo blu principale */
-    color: white; /* testo bianco */
+.btn-primary:hover, .btn-secondary:hover { 
+    background-color: #B0D9D9; /* colore sfondo hover */
 }
 
-.btn-primary:hover {
-    background-color: #B0D9D9; /* blu scuro al passaggio */
-}
-
-.btn-secondary {
-    background-color: #4DB6AC; /* azzurro chiaro */
-    color: white; /* testo bianco */
-}
-
-.btn-secondary:hover {
-    background-color: #B0D9D9; /* cambia in blu principale */
-}
-
-/*================================================================================
-  HERO SECTION
-================================================================================*/
-.hero {
+/* HERO SECTION */
+.hero { 
     position: relative; /* per overlay */
     display: flex; /* layout flessibile */
     flex-wrap: wrap; /* consente di andare a capo */
     align-items: center; /* centrato verticalmente */
     justify-content: center; /* centrato orizzontalmente */
-    padding: 80px 20px; /* spazio interno */
+    padding: 80px 20px; /* padding interno */
     text-align: center; /* testo centrato */
-    color: white; /* testo bianco */
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; /* immagine di sfondo centrata e coprente */
+    color: white; /* colore testo */
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; /* immagine di sfondo */
 }
 
-.hero::before {
-    content: ''; /* elemento pseudo */
+.hero::before { 
+    content: ''; /* pseudo-elemento overlay */
     position: absolute; /* posizione assoluta */
-    inset: 0; /* copre tutto il contenitore */
-    background-color: rgba(0, 95, 115, 0.3); /* overlay semitrasparente blu */
-    z-index: 1; /* dietro al testo */
+    inset: 0; /* copre tutto */
+    background-color: rgba(0, 95, 115, 0.3); /* overlay semitrasparente */
+    z-index: 1; /* sotto il testo */
 }
 
-.hero-text {
-    position: relative; /* necessario sopra overlay */
-    z-index: 2; /* davanti all'overlay */
-    flex: 1 1 400px; /* flessibilità per dimensione minima */
-    padding: 20px; /* spazio interno */
+.hero-text { 
+    position: relative; /* sopra overlay */
+    z-index: 2; /* sopra overlay */
+    flex: 1 1 400px; /* flessibilità dimensione */
+    padding: 20px; /* padding interno */
 }
 
-.hero-logos {
-    display: flex;               /* layout orizzontale */
-    justify-content: center;     /* centrati nella pagina */
-    align-items: center;         /* centrati verticalmente */
-    gap: 30px;                   /* spazio tra i loghi */
-    width: 100%;                 /* prendono tutta la larghezza */
-    margin-bottom: 40px;         /* spazio sotto i loghi */
-    position: relative;          /* rimane nel flusso ma sopra overlay */
-    z-index: 5;                  /* sopra overlay (1) e testo (2) */
-}
-
-.hero-logos img {
-    max-height: 9rem;            /* altezza massima dei loghi */
-    object-fit: contain;         /* mantiene proporzioni */
-}
-
-.hero-text h1 {
-    font-size: 2.8rem; /* dimensione titolo grande */
+.hero-text h1 { 
+    font-size: 2.8rem; /* dimensione titolo */
     margin-bottom: 20px; /* spazio sotto */
 }
 
-.hero-text p {
-    font-size: 1.2rem; /* dimensione testo normale */
+.hero-text p { 
+    font-size: 1.2rem; /* dimensione testo */
     margin-bottom: 20px; /* spazio sotto */
 }
 
-.hero-buttons {
-    display: flex; /* layout flessibile */
-    justify-content: center; /* centrato orizzontalmente */
-    gap: 15px; /* spazio tra bottoni */
-    margin-bottom: 15px; /* margine inferiore */
-}
-
-.hero-text a {
+.hero-text a { 
     color: #ffffff; /* link bianco */
     text-decoration: underline; /* sottolineatura */
 }
 
-.hero-text a:hover {
-    color: #e0e0e0; /* leggermente più chiaro al passaggio */
+.hero-text a:hover { 
+    color: #e0e0e0; /* colore hover */
 }
 
-/*================================================================================
-  SEZIONI GENERALI
-================================================================================*/
-section {
-    padding: 50px 20px; /* spazio interno generale */
-}
-
-section:nth-child(even) {
-    background-color: #c5e4e4; /* sfondo azzurro chiaro alternato */
-}
-
-h2 {
-    font-size: 2rem; /* dimensione titolo sezione */
-    text-align: center; /* centrato */
-    margin-bottom: 40px; /* margine inferiore */
-    color: #196d65; /* colore blu titolo */
-}
-
-/*================================================================================
-  CORSI
-================================================================================*/
-.course-list {
+.hero-buttons, .hero-logos { 
     display: flex; /* layout flessibile */
-    flex-wrap: wrap; /* consente di andare a capo */
-    justify-content: space-around; /* distribuzione orizzontale */
-    gap: 20px; /* spazio tra corsi */
-}
-
-.course-item {
-    background-color: white; /* sfondo bianco */
-    flex: 1 1 250px; /* dimensione minima e flessibile */
-    border-radius: 10px; /* angoli arrotondati */
-    padding: 20px; /* spazio interno */
-    text-align: center; /* testo centrato */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animazione hover */
-    color: black; /* testo nero */
-    text-decoration: none; /* rimuove sottolineature */
-}
-
-.course-item:hover {
-    transform: translateY(-5px); /* solleva leggermente */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* ombra al passaggio */
-    background-color: #c5e4e4; /* azzurro al passaggio */
-    text-decoration: none; /* conferma niente sottolineature */
-}
-
-.course-item i, .course-item h3 {
-    color: #4DB6AC; /* colore blu */
-    margin-bottom: 1 rem; /* margine sotto icona */
-    transition: transform 0.3s ease; /* animazione hover */
-}
-
-.icon-animate:hover {
-    transform: rotate(15deg); /* rotazione icona */
-}
-
-.course-item p {
-    color: black; /* testi sempre neri */
-    text-decoration: none; /* nessuna sottolineatura */
-}
-
-/*================================================================================
-  CARD DETTAGLI CORSI
-================================================================================*/
-.course-details .card {
-    display: flex; /* layout flessibile orizzontale */
-    background: linear-gradient(to bottom, #ffffff, #c5e4e4); /* sfondo bianco->azzurro chiaro */
-    border-radius: 10px; /* angoli arrotondati */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* leggera ombra */
-    margin: 20px auto; /* margine verticale e centrato */
-    max-width: 1200px; /* larghezza massima */
-    overflow: hidden; /* niente overflow */
-    flex-wrap: wrap; /* rende responsive su schermi piccoli */
-}
-
-.card-icon {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    width: 40%;
-    min-height: 200px;
-    overflow: hidden;
-}
-
-/* Overlay uguale per tutte */
-.card-icon::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(77, 182, 172, 0.6),
-        rgba(0, 0, 0, 0.3)
-    );
-    z-index: 1;
-}
-
-.card-icon i {
-    font-size: 4rem;
-    position: relative;
-    z-index: 2; /* sopra overlay */
-}
-
-/* Immagini specifiche per ogni card */
-.card-icon.foto1 {
-    background-image: url("img/Onde.jpg");
-}
-
-.card-icon.foto2 {
-    background-image: url("img/foto_acque_in.jpeg");
-}
-
-.card-icon.foto3 {
-    background-image: url("img/foto_rinn_brev.jpg");
-}
-
-.card-body {
-    display: flex; /* layout flessibile verticale */
-    flex-direction: column; /* elementi uno sotto l'altro */
-    justify-content: flex-start; /* allinea in alto */
-    align-items: flex-start; /* testo allineato a sinistra */
-    padding: 25px; /* spazio interno maggiore */
-    width: 60%; /* 60% della card */
-    color: #333; /* colore testo */
-    line-height: 1.5; /* migliore leggibilità */
-}
-
-.card-body h3 {
-    font-size: 1.5rem; /* dimensione sottotitolo */
-    color: #4DB6AC; /* blu */
-    margin-top: 20px; /* spazio sopra */
-    margin-bottom: 10px; /* spazio sotto */
-}
-
-.card-body ul {
-    list-style: none; /* rimuove punti elenco */
-    padding-left: 0; /* niente padding */
-    margin-top: 10px; /* margine sopra */
-    margin-bottom: 15px; /* margine sotto lista */
-}
-
-.card-body li {
-    margin-bottom: 10px; /* spazio tra elementi lista */
-}
-
-.card-body p {
-    margin-top: 10px; /* spazio sopra paragrafo */
-    margin-bottom: 10px; /* spazio sotto paragrafo */
-    color: #333; /* colore testo */
-    font-size: 1rem; /* dimensione testo */
-    text-align: left; /* allineamento a sinistra */
-}
-
-/*================================================================================
-  PERCHÉ SNS
-================================================================================*/
-.why-sns ul {
-    list-style: none; /* rimuove punti elenco */
-    max-width: 700px; /* larghezza massima */
-    margin: 0 auto; /* centrato */
-    padding-left: 4rem; /* sposta leggermente a destra */
-}
-
-.why-sns li {
-    font-size: 1.2rem; /* dimensione testo */
-    margin-bottom: 15px; /* spazio tra elementi */
-    position: relative; /* necessario per icona pseudo */
-    padding-left: 2rem; /* spazio per icona */
-}
-
-.why-sns li::before {
-    content: "\f058"; /* icona check FontAwesome */
-    font-family: "Font Awesome 5 Free"; /* font icona */
-    font-weight: 900; /* peso icona */
-    position: absolute; /* posizione assoluta */
-    left: 0; /* allinea a sinistra */
-    color: #ffffff; /* colore blu */
-}
-
-/*================================================================================
-  ORDINANZE
-================================================================================*/
-.ordinanze {
-    text-align: center; /* testo centrato */
-}
-
-.ordinanze p {
-    margin-top: 15px; /* margine superiore */
-    font-size: 1rem; /* dimensione testo */
-}
-
-/*================================================================================
-  ABOUT
-================================================================================*/
-.about p {
-    max-width: 700px; /* larghezza massima */
-    margin: 15px auto; /* centrato e margine verticale */
-    font-size: 1.1rem; /* dimensione testo */
-}
-
-.center-buttons {
-    display: flex; /* layout flessibile */
-    justify-content: center; /* centrato */
-    gap: 20px; /* spazio tra bottoni */
-    margin-top: 20px; /* margine superiore */
-}
-
-/*================================================================================
-  CONTATTI
-================================================================================*/
-.contact form {
-    max-width: 600px; /* larghezza massima form */
-    margin: 0 auto; /* centrato */
-    display: flex; /* layout flessibile */
-    flex-direction: column; /* verticale */
+    justify-content: center; /* centrato orizzontalmente */
+    align-items: center; /* centrato verticalmente */
     gap: 15px; /* spazio tra elementi */
 }
 
-.contact input,
-.contact textarea,
-.contact select {
-    padding: 12px; /* spazio interno */
+.hero-logos { 
+    gap: 30px; /* spazio maggiore tra loghi */
+    width: 100%; /* larghezza piena */
+    margin-bottom: 40px; /* margine sotto */
+    position: relative; /* sopra overlay */
+    z-index: 5; /* sopra testo e overlay */
+}
+
+.hero-logos img { 
+    max-height: 9rem; /* altezza massima loghi */
+    object-fit: contain; /* mantiene proporzioni */
+}
+
+/* SEZIONI GENERALI */
+section { 
+    padding: 50px 20px; /* padding interno sezione */
+}
+
+section:nth-child(even) { 
+    background-color: #c5e4e4; /* colore sfondo alternato */
+}
+
+h2 { 
+    font-size: 2rem; /* dimensione titolo sezione */
+    text-align: center; /* centrato */
+    margin-bottom: 40px; /* margine sotto */
+    color: #196d65; /* colore titolo */
+}
+
+/* CORSI */
+.course-list { 
+    display: flex; /* layout flessibile */
+    flex-wrap: wrap; /* permette andata a capo */
+    justify-content: space-around; /* distribuzione orizzontale */
+    gap: 20px; /* spazio tra card */
+}
+
+.course-item { 
+    background-color: white; /* sfondo card */
+    flex: 1 1 250px; /* dimensione flessibile */
+    border-radius: 10px; /* angoli arrotondati */
+    padding: 20px; /* padding interno */
+    text-align: center; /* testo centrato */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* animazione hover */
+    color: black; /* colore testo */
+    text-decoration: none; /* rimuove sottolineatura */
+}
+
+.course-item:hover { 
+    transform: translateY(-5px); /* solleva leggermente */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* ombra hover */
+    background-color: #c5e4e4; /* sfondo hover */
+}
+
+.course-item i, .course-item h3 { 
+    color: #4DB6AC; /* colore icona/titolo */
+    margin-bottom: 1rem; /* margine sotto */
+    transition: transform 0.3s ease; /* animazione hover */
+}
+
+.icon-animate:hover { 
+    transform: rotate(15deg); /* rotazione icona */
+}
+
+.course-item p { 
+    color: black; /* testo nero */
+}
+
+/* CARD DETTAGLI CORSI */
+.course-details .card { 
+    display: flex; /* layout flessibile orizzontale */
+    flex-wrap: wrap; /* rende responsive */
+    background: linear-gradient(to bottom, #ffffff, #c5e4e4); /* sfondo gradient */
+    border-radius: 10px; /* angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ombra card */
+    margin: 20px auto; /* margine verticale e centrato */
+    max-width: 1200px; /* larghezza massima */
+    overflow: hidden; /* niente overflow */
+}
+
+.card-icon { 
+    position: relative; /* necessario overlay */
+    display: flex; /* layout icona */
+    justify-content: center; /* centrato orizzontale */
+    align-items: center; /* centrato verticale */
+    background-size: cover; /* copre area */
+    background-position: center; /* centrato */
+    color: white; /* colore icona */
+    width: 40%; /* occupa 40% */
+    min-height: 200px; /* altezza minima */
+    overflow: hidden; /* taglio contenuto */
+}
+
+.card-icon::before { 
+    content: ""; /* overlay */
+    position: absolute; /* posizione assoluta */
+    inset: 0; /* copre tutta area */
+    background: linear-gradient(to bottom, rgba(77, 182, 172, 0.6), rgba(0, 0, 0, 0.3)); /* sfondo overlay */
+    z-index: 1; /* sotto icona */
+}
+
+.card-icon i { 
+    font-size: 4rem; /* dimensione icona */
+    position: relative; /* sopra overlay */
+    z-index: 2; /* sopra overlay */
+}
+
+.card-icon.foto1 { background-image: url("img/Onde.jpg"); } /* immagine card 1 */
+.card-icon.foto2 { background-image: url("img/foto_acque_in.jpeg"); } /* immagine card 2 */
+.card-icon.foto3 { background-image: url("img/foto_rinn_brev.jpg"); } /* immagine card 3 */
+
+.card-body { 
+    display: flex; /* layout verticale */
+    flex-direction: column; /* elementi sotto */
+    justify-content: flex-start; /* allinea in alto */
+    align-items: flex-start; /* testo allineato a sinistra */
+    padding: 25px; /* padding interno */
+    width: 60%; /* larghezza card body */
+    color: #333; /* colore testo */
+    line-height: 1.5; /* leggibilità */
+}
+
+.card-body h3 { 
+    font-size: 1.5rem; /* sottotitolo */
+    color: #4DB6AC; /* colore sottotitolo */
+    margin: 20px 0 10px; /* margini sopra e sotto */
+}
+
+.card-body ul { 
+    list-style: none; /* rimuove punti elenco */
+    padding-left: 0; /* padding sinistro 0 */
+    margin: 10px 0 15px; /* margini sopra e sotto lista */
+}
+
+.card-body li { margin-bottom: 10px; /* spazio tra li */ }
+
+.card-body p { 
+    margin: 10px 0; /* margini testo */
+    color: #333; /* colore testo */
+    font-size: 1rem; /* dimensione testo */
+    text-align: left; /* allinea a sinistra */
+}
+
+/* PERCHÉ SNS */
+.why-sns ul { 
+    list-style: none; /* rimuove punti elenco */
+    max-width: 700px; /* larghezza massima */
+    margin: 0 auto; /* centrato */
+    padding-left: 4rem; /* padding sinistro */
+}
+
+.why-sns li { 
+    font-size: 1.2rem; /* dimensione testo */
+    margin-bottom: 15px; /* margine sotto */
+    position: relative; /* necessario pseudo-elemento */
+    padding-left: 2rem; /* spazio per icona */
+}
+
+.why-sns li::before { 
+    content: "\f058"; /* icona check */
+    font-family: "Font Awesome 5 Free"; /* font icona */
+    font-weight: 900; /* grassetto icona */
+    position: absolute; /* posizione icona */
+    left: 0; /* allineamento a sinistra */
+    color: #ffffff; /* colore icona */
+}
+
+/* ORDINANZE */
+.ordinanze { text-align: center; /* testo centrato */ }
+
+.ordinanze p { 
+    margin-top: 15px; /* margine sopra */
+    font-size: 1rem; /* dimensione testo */
+}
+
+/* ABOUT */
+.about p { 
+    max-width: 700px; /* larghezza testo */
+    margin: 15px auto; /* margini verticali e centrato */
+    font-size: 1.1rem; /* dimensione testo */
+}
+
+.center-buttons { 
+    display: flex; /* layout flessibile */
+    justify-content: center; /* centrato */
+    gap: 20px; /* spazio tra bottoni */
+    margin-top: 20px; /* margine sopra */
+}
+
+/* CONTATTI */
+.contact form { 
+    max-width: 600px; /* larghezza form */
+    margin: 0 auto; /* centrato */
+    display: flex; /* layout flessibile */
+    flex-direction: column; /* elementi sotto */
+    gap: 15px; /* spazio tra input */
+}
+
+.contact input, .contact textarea, .contact select { 
+    padding: 12px; /* padding interno */
     border-radius: 5px; /* angoli arrotondati */
     border: 1px solid #ccc; /* bordo grigio chiaro */
     font-size: 1rem; /* dimensione testo */
-    width: 100%; /* larghezza completa */
+    width: 100%; /* larghezza piena */
 }
 
-.contact textarea {
+.contact textarea { 
     min-height: 120px; /* altezza minima */
-    resize: vertical; /* ridimensionabile verticalmente */
+    resize: vertical; /* ridimensionabile verticale */
 }
 
-.privacy-label {
+.privacy-label { 
     display: flex; /* layout flessibile */
-    flex-direction: column; /* verticale */
+    flex-direction: column; /* elementi sotto */
     align-items: flex-start; /* allineato a sinistra */
-    gap: 5px; /* spazio tra testo e checkbox */
+    gap: 5px; /* spazio tra elementi */
     font-size: 0.9rem; /* dimensione testo piccolo */
 }
 
-.privacy-label input[type="checkbox"] {
+.privacy-label input[type="checkbox"] { 
     width: 18px; /* dimensione checkbox */
-    height: 18px; 
+    height: 18px; /* dimensione checkbox */
 }
 
-.contact button {
-    background-color: #4DB6AC; /* blu */
-    color: white; /* testo bianco */
-    padding: 12px; /* spazio interno */
+.contact button { 
+    background-color: #4DB6AC; /* colore sfondo */
+    color: white; /* colore testo */
+    padding: 12px; /* padding interno */
     border: none; /* nessun bordo */
     border-radius: 5px; /* angoli arrotondati */
-    cursor: pointer; /* puntatore */
+    cursor: pointer; /* cursor pointer */
     font-weight: bold; /* testo grassetto */
-    transition: background 0.3s ease; /* transizione hover */
+    transition: background 0.3s ease; /* animazione hover */
 }
 
-.contact button:hover {
-    background-color: #196d65; /* blu scuro al passaggio */
-}
+.contact button:hover { background-color: #196d65; /* hover sfondo */ }
 
-/*================================================================================
-  FOOTER
-================================================================================*/
-footer {
-    background-color: #196d65; /* blu scuro */
-    color: white; /* testo bianco */
+/* FOOTER */
+footer { 
+    background-color: #196d65; /* colore sfondo */
+    color: white; /* colore testo */
     display: flex; /* layout flessibile */
     flex-wrap: wrap; /* va a capo se necessario */
-    justify-content: space-around; /* spazio tra colonne */
-    padding: 60px 20px 20px; /* padding verticale più grande sopra per loghi */
-    gap: 20px; /* spazio tra colonne */
-    position: relative; /* necessario per posizionare loghi sopra */
+    justify-content: space-around; /* spazio intorno */
+    padding: 60px 20px 20px; /* padding interno */
+    gap: 20px; /* spazio tra elementi */
+    position: relative; /* posizione relativa */
 }
 
-footer h3 {
-    margin-bottom: 10px; /* margine sotto titoli */
+footer h3 { margin-bottom: 10px; /* margine sotto */ }
+
+footer a { 
+    color: white; /* colore link */
+    text-decoration: none; /* rimuove sottolineatura */
+}
+footer a:hover { color: #81d4fa; /* colore hover link */ }
+
+.footer-privacy { 
+    background-color: #196d65 !important; /* sfondo footer privacy */
+    text-align: center; /* centrato */
+    font-size: 0.8rem; /* piccolo */
+    margin-top: 20px; /* margine sopra */
+    color: #ffffff; /* colore testo */
+    width: 100%; /* larghezza piena */
 }
 
-footer a {
-    color: white; /* link bianco */
-    text-decoration: none; /* rimuove sottolineature */
-}
+/* RESPONSIVE */
+@media (max-width: 768px) { 
+    .hero { padding: 60px 20px; /* riduce padding hero */ }
 
-footer a:hover {
-    color: #81d4fa; /* azzurro chiaro al passaggio */
-    text-decoration: none; /* niente sottolineatura hover */
-}
+    .hero-text h1 { font-size: 2rem; /* titolo più piccolo */ }
 
-/* Loghi sopra il footer */
-.footer-logos {
-    display: flex;               /* layout orizzontale */
-    justify-content: center;     /* centrati nella pagina */
-    align-items: center;         /* centrati verticalmente */
-    gap: 30px;                   /* spazio tra loghi */
-    width: 100%;                /* prendono tutta la larghezza */
-}
+    .hero-text p { font-size: 1rem; /* testo più piccolo */ }
 
-.footer-logos img {
-    max-height: 9rem;            /* altezza massima dei loghi */
-    object-fit: contain;         /* mantiene proporzioni */
-}
-
-/* Privacy */
-.footer-privacy {
-    background-color: #196d65 !important;  /* stesso colore del footer */
-    text-align: center;          /* centra il testo */
-    font-size: 0.8rem;           /* testo più piccolo */
-    margin-top: 20px;            /* spazio sufficiente dai loghi */
-    color: #ffffff;              /* testo bianco */
-    width: 100%;                 /* larghezza totale */
-}
-
-
-
-/*================================================================================
-  RESPONSIVE
-================================================================================*/
-@media (max-width: 768px) {
-
-    .hero {
-        padding: 60px 20px; /* ridotto su mobile */
+    .course-list, .hero-buttons, .center-buttons { 
+        flex-direction: column; /* impila elementi */
+        gap: 10px; /* riduce gap */
     }
+    .course-list { align-items: center; /* centra le card */ }
 
-    .hero-text h1 {
-        font-size: 2rem; /* titolo più piccolo */
-    }
-
-    .hero-text p {
-        font-size: 1rem; /* testo più piccolo */
-    }
-
-    .course-list,
-    .hero-buttons,
-    .center-buttons {
-        flex-direction: column; /* verticale */
-        gap: 10px; /* spazio ridotto */
-    }
-
-    .course-list {
-        flex-direction: column; /* le card in colonna */
-        align-items: center; /* centrate */
-    }
-
-    .course-item {
+    .course-item { 
         max-height: 350px; /* altezza massima */
-        overflow: auto; /* se il contenuto è troppo lungo si può scrollare */
-        flex: 1 1 90%; /* larghezza quasi piena */
-        padding: 15px; /* meno padding per mobile */
+        overflow: auto; /* scrollbar se serve */
+        flex: 1 1 90%; /* larghezza flessibile */
+        padding: 15px; /* padding interno */
     }
-
-    .course-details .card {
-        flex-direction: column; /* verticale */
+    .course-details .card { 
+        flex-direction: column; /* card impilate verticalmente */
         align-items: center; /* centrato */
     }
+    .card-icon, .card-body { width: 100%; /* piena larghezza */ }
 
-  .course-details .card {
-        flex-direction: column; /* verticalizza la card */
-    }
-    .card-icon, .card-body {
-        width: 100%; /* occupano tutta la larghezza */
-    }
-    .card-icon {
-        min-height: 250px; /* altezza ridotta per mobile */
-    }
+    .card-icon { min-height: 250px; /* altezza minima maggiore */ }
 
-    .why-sns ul {
-        list-style: none; /* rimuove punti elenco */
-        max-width: 700px; /* larghezza massima */
-        margin: 0 auto; /* centrato */
-        padding-left: 30px; /* sposta leggermente a destra */
-    }
-
+    .why-sns ul { padding-left: 30px; /* padding sinistro ridotto */ }
 }
-
