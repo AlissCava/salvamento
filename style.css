@@ -214,17 +214,51 @@ h2 {
 }
 
 .card-icon {
-    display: flex; /* layout flessibile */
-    justify-content: center; /* centrato orizzontalmente */
-    align-items: center; /* centrato verticalmente */
-    background: linear-gradient(to bottom, #ffffff, #4DB6AC); /* sfumato bianco->blu */
-    color: white; /* colore icona */
-    width: 40%; /* 40% della card */
-    min-height: 200px; /* altezza minima per uniformità */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 40%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+/* Overlay uguale per tutte */
+.card-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(77, 182, 172, 0.6),
+        rgba(0, 0, 0, 0.3)
+    );
+    z-index: 1;
 }
 
 .card-icon i {
-    font-size: 4rem; /* dimensione icona */
+    font-size: 4rem;
+    position: relative;
+    z-index: 2; /* sopra overlay */
+}
+
+/* Immagini specifiche per ogni card */
+.card-icon.foto1 {
+    background-image: url("img/Onde.jpg");
+}
+
+.card-icon.foto2 {
+    background-image: url("img/foto_acque_in.jpeg");
+}
+
+.card-icon.foto3 {
+    background-image: url("img/foto_rinn_brev.jpg");
 }
 
 .card-body {
@@ -474,7 +508,7 @@ footer a:hover {
         width: 100%; /* occupano tutta la larghezza */
     }
     .card-icon {
-        min-height: 150px; /* altezza ridotta per mobile */
+        min-height: 250px; /* altezza ridotta per mobile */
     }
 
     .why-sns ul {
