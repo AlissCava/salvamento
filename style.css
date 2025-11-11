@@ -109,6 +109,62 @@ a:hover {
     max-height: 9rem; /* altezza massima loghi */
     object-fit: contain; /* mantiene proporzioni */
 }
+/* Sezione carosello full width */
+.carousel-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Altezza visibile: puoi regolarla (es. 50vh, 70vh...) */
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  margin: 0;
+  display: block;
+}
+
+/* Pulsanti freccia */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-btn.prev { left: 60px; }
+.carousel-btn.next { right: 60px; }
+
 
 /* SEZIONI GENERALI */
 section { 
@@ -370,6 +426,14 @@ footer a:hover { color: #81d4fa; /* colore hover link */ }
     .hero-text h1 { font-size: 2rem; /* titolo più piccolo */ }
 
     .hero-text p { font-size: 1rem; /* testo più piccolo */ }
+
+    .carousel-container {
+        height: 40vh;
+    }
+
+    .carousel-btn {
+        padding: 10px 12px;
+    }
 
     .course-list, .hero-buttons, .center-buttons { 
         flex-direction: column; /* impila elementi */
