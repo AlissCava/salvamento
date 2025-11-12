@@ -195,6 +195,7 @@ h2 {
     transform: translateY(-5px); /* solleva leggermente */
     box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* ombra hover */
     background-color: #c5e4e4; /* sfondo hover */
+    text-decoration: none; /* rimuove sottolineatura */
 }
 
 .course-item i, .course-item h3 { 
@@ -251,7 +252,7 @@ h2 {
 }
 
 .card-icon.foto1 { background-image: url("img/Onde.jpg"); } /* immagine card 1 */
-.card-icon.foto2 { background-image: url("img/foto_acque_in.jpeg"); } /* immagine card 2 */
+.card-icon.foto2 { background-image: url("img/bagnino_piscina.jpg"); } /* immagine card 2 */
 .card-icon.foto3 { background-image: url("img/foto_rinn_brev.jpg"); } /* immagine card 3 */
 
 .card-body { 
@@ -408,7 +409,7 @@ h2 {
 
 .faq-question:hover {
   background-color: #4DB6AC;
-  color: #e0e0e0;
+  color: white;
 }
 
 .faq-answer {
