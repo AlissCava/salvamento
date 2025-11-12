@@ -156,13 +156,6 @@ a:hover {
 .prev { left: 25px; }
 .next { right: 25px; }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .slide img {
-    width: 100%;
-  }
-}
-
 /* SEZIONI GENERALI */
 section { 
     padding: 50px 20px; /* padding interno sezione */
