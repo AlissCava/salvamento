@@ -41,6 +41,7 @@ a:hover {
 
 .btn-primary:hover, .btn-secondary:hover { 
     background-color: #B0D9D9; /* colore sfondo hover */
+    text-decoration: none;
 }
 
 /* HERO SECTION */
@@ -299,7 +300,6 @@ h2 {
     font-size: 1.2rem; /* dimensione testo */
     margin-bottom: 15px; /* margine sotto */
     position: relative; /* necessario pseudo-elemento */
-    padding-left: 2rem; /* spazio per icona */
 }
 
 .why-sns li::before { 
@@ -307,8 +307,8 @@ h2 {
     font-family: "Font Awesome 5 Free"; /* font icona */
     font-weight: 900; /* grassetto icona */
     position: absolute; /* posizione icona */
-    left: 0; /* allineamento a sinistra */
-    color: #ffffff; /* colore icona */
+    left: -30px; /* allineamento a sinistra */
+    color: #4DB6AC; /* colore icona */
 }
 
 /* ORDINANZE */
