@@ -109,62 +109,59 @@ a:hover {
     max-height: 9rem; /* altezza massima loghi */
     object-fit: contain; /* mantiene proporzioni */
 }
+
+
 /* Sezione carosello full width */
-.carousel-section {
+.carousel {
+  position: relative;
   width: 100%;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 60vh; /* Altezza visibile: puoi regolarla (es. 50vh, 70vh...) */
-  margin: 0;
-  padding: 0;
+.carousel-inner {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
 }
 
-.carousel-slide {
-  display: none;
-  width: 100%;
-  height: 100%;
+.slide {
+  min-width: 100%;
+  display: flex;
+  gap: 10px; /* 👈 Spazio tra le immagini */
 }
 
-.carousel-slide.active {
-  display: block;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
+.slide img {
+  width: 33%;
+  max-height: 500px;
   object-fit: cover;
-  border: none;
-  margin: 0;
-  display: block;
+  gap: 10px;
 }
 
-/* Pulsanti freccia */
-.carousel-btn {
+/* Frecce di navigazione */
+.prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0,0,0,0.4);
   color: white;
   border: none;
-  padding: 14px 18px;
+  font-size: 2rem;
+  padding: 0.3em 0.5em;
   cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
-
-.carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.6);
 }
+.prev { left: 25px; }
+.next { right: 25px; }
 
-.carousel-btn.prev { left: 60px; }
-.carousel-btn.next { right: 60px; }
-
+/* Responsive */
+@media (max-width: 768px) {
+  .slide img {
+    width: 100%;
+  }
+}
 
 /* SEZIONI GENERALI */
 section { 
@@ -389,6 +386,50 @@ h2 {
 }
 
 .contact button:hover { background-color: #196d65; /* hover sfondo */ }
+
+/* SEZIONE FAQ */
+#faq {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  background-color: #B0D9D9;
+  color: black;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #4DB6AC;
+  color: #e0e0e0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f1f1f1;
+  padding: 0 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.faq-answer p {
+  margin: 15px 0;
+}
 
 /* FOOTER */
 footer { 

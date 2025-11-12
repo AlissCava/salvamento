@@ -7,7 +7,7 @@
 
     <!-- Font Awesome per icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+     
     <!-- Foglio di stile principale -->
     <link rel="stylesheet" href="style.css">
 
@@ -64,21 +64,27 @@ e contatti diretti (telefono e mail). Il layout è centrato e usa una hero image
 
 -->
 <!-- ===== CAROSELLO ===== -->
-<section id="carosello" class="carousel-section">
-  <div class="carousel-container">
-    <div class="carousel-slide active">
-      <img src="img/carosello1.png" alt="Mare 1">
+<section class="carousel">
+  
+  <div class="carousel-inner">
+    <div class="slide">
+      <img src="img/carosello1.jpg" alt="Corso in mare">
+      <img src="img/carosello2.png" alt="Corso in piscina">
+      <img src="img/carosello3.png" alt="Allenamento in mare">
     </div>
-    <div class="carousel-slide">
-      <img src="img/carosello2.png" alt="Mare 2">
+    <div class="slide">
+      <img src="img/carosello4.jpg" alt="Allenamento in mare">
+      <img src="img/carosello5.jpg" alt="Allenamento in piscina">
+      <img src="img/carosello6.jpg" alt="Allenamento in mare">
     </div>
-    <div class="carousel-slide">
-      <img src="img/carosello 3.png" alt="Mare 3">
+    <div class="slide">
+      <img src="img/carosello7.jpg" alt="Soccorso in mare">
+      <img src="img/carosello8.jpg" alt="Soccorso in piscina">
+      <img src="img/carosello9.jpg" alt="Soccorso in piscina">
     </div>
-
-    <button class="carousel-btn prev" aria-label="Immagine precedente">&#10094;</button>
-    <button class="carousel-btn next" aria-label="Immagine successiva">&#10095;</button>
   </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
 </section>
 
 
@@ -305,6 +311,67 @@ Modulo contatti con campi obbligatori, selezione interesse e checkbox privacy.
     </form>
 </section>
 
+
+ <!--SEZIONE FAQ-->
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <button class="faq-question">D1</button>
+    <div class="faq-answer">
+      <p>R1.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">2</button>
+    <div class="faq-answer">
+      <p>2</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">3</button>
+    <div class="faq-answer">
+      <p>3</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">4</button>
+    <div class="faq-answer">
+      <p>4</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">5</button>
+    <div class="faq-answer">
+      <p>5</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">6</button>
+    <div class="faq-answer">
+      <p>6</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">7</button>
+    <div class="faq-answer">
+      <p>7</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">8</button>
+    <div class="faq-answer">
+      <p>8</p>
+    </div>
+  </div>
+
+</section>
 
 
 <!-- Footer -->
