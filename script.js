@@ -1,4 +1,4 @@
-// GESTIONE CAROSELLO IMMAGINI
+// CAROSELLO
 const slides = document.querySelectorAll('.slide');
 const btnNext = document.querySelector('.next');
 const btnPrev = document.querySelector('.prev');
@@ -11,19 +11,21 @@ function showSlide(index) {
   });
 }
 
-function moveSlide(step) {
-  currentSlide += step;
+btnNext.addEventListener('click', () => {
+  currentSlide++;
   if (currentSlide >= slides.length) currentSlide = 0;
+  showSlide(currentSlide);
+});
+
+btnPrev.addEventListener('click', () => {
+  currentSlide--;
   if (currentSlide < 0) currentSlide = slides.length - 1;
   showSlide(currentSlide);
-}
+});
 
-if (btnNext && btnPrev) {
-  btnNext.addEventListener('click', () => moveSlide(1));
-  btnPrev.addEventListener('click', () => moveSlide(-1));
-}
+showSlide(currentSlide);
 
-// GESTIONE ACCORDION FAQ
+// SEZIONE FAQ
 const faqButtons = document.querySelectorAll(".faq-question");
 
 faqButtons.forEach(btn => {
@@ -31,8 +33,7 @@ faqButtons.forEach(btn => {
     const answer = btn.nextElementSibling;
     const isOpen = answer.style.maxHeight && answer.style.maxHeight !== "0px";
 
-    // Chiudi tutte le altre risposte aperte
-    document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = "0px");
+    document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = "0");
 
     if (!isOpen) {
       answer.style.maxHeight = answer.scrollHeight + "px";
