@@ -680,32 +680,217 @@ footer a:hover { color: #81d4fa; }
     width: 100%; 
 }
 
-/* RESPONSIVE TABLET & MOBILE */
+/*================================================================================
+  OTTIMIZZAZIONI ESCLUSIVE PER SMARTPHONE (DESKTOP INVARIATO)
+================================================================================*/
 @media (max-width: 768px) { 
-    .nav-links { display: none; } /* Su schermi piccoli non intralcia */
-    .dual-tables { grid-template-columns: 1fr; }
-    .dates-list { grid-template-columns: 1fr; }
-    .form-row-pc { flex-direction: column; gap: 15px; }
 
-    .hero { padding: 60px 20px; }
-    .hero-text h1 { font-size: 2rem; }
-    .hero-text p { font-size: 1rem; }
+    /* 1. RIDUZIONE SPAZIATURE ESTERNE */
+    section { 
+        padding: 30px 10px; /* Recupera oltre 20px di spazio orizzontale */
+    }
 
-    .course-list, .hero-buttons, .center-buttons { 
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    /* 2. BARRA SUPERIORE MOBILE */
+    .navbar {
+        padding: 4px 0;
+    }
+    .nav-container {
+        justify-content: center; /* Centra il titolo evitando buchi vuoti */
+        padding: 8px 12px;
+    }
+    .nav-brand {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .nav-links { 
+        display: none; 
+    }
+
+    /* 3. HERO SECTION */
+    .hero { 
+        padding: 40px 12px; 
+    }
+    .hero-logos {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .hero-logos img {
+        max-height: 5.5rem;
+    }
+    .hero-text h1 { 
+        font-size: 1.6rem; 
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+    .hero-text p { 
+        font-size: 0.95rem; 
+    }
+    .hero-buttons { 
         flex-direction: column; 
-        gap: 10px; 
+        gap: 8px; 
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero-buttons .btn-primary, 
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        margin: 0;
+        padding: 12px;
+    }
+    .hero-contact-grid {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 14px;
+        text-align: left;
+    }
+    .hero-contact-grid p {
+        font-size: 0.88rem;
+    }
+
+    /* 4. SEZIONE DATE E TABELLE CORSI (RISOLVE IL PROBLEMA DELLO SCREENSHOT) */
+    .dates-container {
+        gap: 18px;
+    }
+    .date-card {
+        padding: 14px 8px; /* Elimina l'ingombro laterale da 30px */
+        border-radius: 8px;
+    }
+    .date-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+    .dual-tables { 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    .table-wrapper {
+        padding: 10px 4px; /* Rende la tabella larga quanto lo schermo */
+        box-shadow: none;
+        border: 1px solid #e0e0e0;
+    }
+    .table-title {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+    }
+    
+    /* Layout tabella compatto e fluido su telefono */
+    .dates-table {
+        font-size: 0.82rem;
+        width: 100%;
+    }
+    .dates-table th, 
+    .dates-table td {
+        padding: 8px 4px; /* Spazio orizzontale ottimizzato per non spezzare le date */
+        text-align: center;
+    }
+    .dates-table th:first-child, 
+    .dates-table td:first-child {
+        text-align: left;
+        width: 44%; /* Riserva spazio sufficiente per il testo della sessione */
+        padding-left: 6px;
+    }
+    .dates-table small {
+        font-size: 0.72rem;
+        display: block;
+        line-height: 1.15;
+        color: #555;
+    }
+
+    /* 5. LISTA DATE RINNOVO */
+    .dates-list { 
+        grid-template-columns: 1fr; 
+        gap: 6px;
+    }
+    .dates-list li {
+        padding: 8px 10px;
+        font-size: 0.88rem;
+    }
+
+    /* Rinnovi > 5 anni */
+    .over-five-dates { 
+        flex-direction: column; 
+        gap: 8px; 
+    }
+    .date-pill {
+        font-size: 0.95rem;
+        padding: 8px 14px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 6. CARD CORSI */
+    .course-list { 
+        flex-direction: column; 
+        gap: 12px; 
     }
     .course-item { 
-        flex: 1 1 90%; 
-        padding: 15px; 
+        max-width: 100%; 
+        padding: 16px; 
     }
     .course-details .card { 
         flex-direction: column; 
         align-items: center; 
     }
-    .card-icon, .card-body { width: 100%; }
-    .card-icon { min-height: 250px; }
-    .why-sns ul { padding-left: 30px; }
-    .slide img { width: 100%; } /* Immagine singola su mobile */
-    .over-five-dates { flex-direction: column; gap: 10px; }
+    .card-icon, 
+    .card-body { 
+        width: 100%; 
+    }
+    .card-icon { 
+        min-height: 180px; 
+    }
+    .card-body {
+        padding: 18px 12px;
+    }
+    .card-body h3 {
+        font-size: 1.25rem;
+    }
+
+    /* 7. CAROSELLO & SLIDE */
+    .carousel {
+        margin: 15px auto;
+    }
+    .slide img { 
+        width: 100%; /* Mostra una sola immagine a tutto schermo su telefono */
+        max-height: 260px;
+    }
+
+    /* 8. ALTRE SEZIONI & FORM */
+    .why-sns ul { 
+        padding-left: 28px; 
+    }
+    .why-sns li {
+        font-size: 1rem;
+    }
+    .ordinanze-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .ordinanze-buttons .btn-primary {
+        margin: 0;
+        width: 100%;
+    }
+    .form-row-pc { 
+        flex-direction: column; 
+        gap: 12px; 
+    }
+    .contact form {
+        padding: 0 4px;
+    }
+    .contact input, 
+    .contact textarea, 
+    .contact select {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    .privacy-label {
+        align-items: flex-start;
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
 }
