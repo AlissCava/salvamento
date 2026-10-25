@@ -1,37 +1,29 @@
-
-//CAROSELLO
+// GESTIONE CAROSELLO IMMAGINI
 const slides = document.querySelectorAll('.slide');
 const btnNext = document.querySelector('.next');
 const btnPrev = document.querySelector('.prev');
 
 let currentSlide = 0;
 
-// Mostra la slide corrente e nasconde le altre
 function showSlide(index) {
-  slides.forEach((slide, i) => {
+  slides.forEach((slide) => {
     slide.style.transform = `translateX(-${index * 100}%)`;
   });
 }
 
-// Avanti
-btnNext.addEventListener('click', () => {
-  currentSlide++;
+function moveSlide(step) {
+  currentSlide += step;
   if (currentSlide >= slides.length) currentSlide = 0;
-  showSlide(currentSlide);
-});
-
-// Indietro
-btnPrev.addEventListener('click', () => {
-  currentSlide--;
   if (currentSlide < 0) currentSlide = slides.length - 1;
   showSlide(currentSlide);
-});
+}
 
-// Inizializza
-showSlide(currentSlide);
+if (btnNext && btnPrev) {
+  btnNext.addEventListener('click', () => moveSlide(1));
+  btnPrev.addEventListener('click', () => moveSlide(-1));
+}
 
-
-//SEZIONE FAQ
+// GESTIONE ACCORDION FAQ
 const faqButtons = document.querySelectorAll(".faq-question");
 
 faqButtons.forEach(btn => {
@@ -39,8 +31,8 @@ faqButtons.forEach(btn => {
     const answer = btn.nextElementSibling;
     const isOpen = answer.style.maxHeight && answer.style.maxHeight !== "0px";
 
-    // chiudi tutti
-    document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = "0");
+    // Chiudi tutte le altre risposte aperte
+    document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = "0px");
 
     if (!isOpen) {
       answer.style.maxHeight = answer.scrollHeight + "px";

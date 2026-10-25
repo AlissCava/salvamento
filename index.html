@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sezione SNS Albenga, Savona, Vado L., Finale L. | Corsi Assistente Bagnanti & Rinnovi</title>
+    <title>SNS Albenga e Savona | Corsi Assistente Bagnanti & Rinnovi Brevetto</title>
 
     <!-- Font Awesome per icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,61 +11,77 @@
     <!-- Foglio di stile principale -->
     <link rel="stylesheet" href="style.css">
 
-    <meta name="description" content="Corsi e rinnovi per Assistente Bagnanti con la Sezione SNS Albenga. Formazione mare, piscine e acque interne.">
-    <meta name="keywords" content="salvamento, assistente bagnanti, SNS, Albenga, corsi, rinnovo brevetto, piscina, mare">
-
+    <meta name="description" content="Corsi e rinnovi per Assistente Bagnanti con la Sezione SNS Albenga e Savona. Formazione mare, piscine e acque interne.">
+    <meta name="keywords" content="salvamento, assistente bagnanti, SNS, Albenga, Savona, corsi, rinnovo brevetto, piscina, mare">
 </head>
 <body>
 
-<!--
-================================================================================
- HERO SECTION
-================================================================================
-Questa sezione è la prima cosa che l'utente vede. Contiene titolo, descrizione, pulsanti principali
-e contatti diretti (telefono e mail). Il layout è centrato e usa una hero image di sfondo.
--->
-<section class="hero" id="hero">
+<!-- BARRA DI NAVIGAZIONE DESKTOP (STICKY) -->
+<header class="top-nav">
+    <div class="nav-container">
+        <div class="brand">
+            <span class="brand-title"><i class="fas fa-life-ring"></i> SNS Liguria Ponente</span>
+            <span class="brand-sub">Albenga • Savona • Vado L. • Finale L.</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#corsi">Corsi</a>
+            <a href="#calendario" class="nav-highlight">Date & Calendario</a>
+            <a href="#ordinanze">Ordinanze</a>
+            <a href="#chi-siamo">Chi Siamo</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contatti" class="btn-nav">Contattaci</a>
+        </nav>
+    </div>
+</header>
 
-    <!-- Loghi in alto -->
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
     <div class="hero-logos">
-        <img src="img/logo_albenga.PNG" alt="Logo 1">
-        <img src="img/logo-flat-square-salvamento2.png" alt="Logo 2">
+        <img src="img/logo_albenga.PNG" alt="Logo SNS Albenga">
+        <img src="img/logo-flat-square-salvamento2.png" alt="Logo SNS Nazionale">
     </div>
 
-    <!-- Container testo centrale della hero -->
     <div class="hero-text">
+        <h1>Diventa Assistente Bagnanti</h1>
+        <p class="subtitle">Sezione SNS Albenga, Savona, Vado Ligure e Finale Ligure</p>
+        <p class="desc">Formazione professionale, tecnica e pratica per la salvaguardia della vita in mare, acque interne e piscine.</p>
 
-        <!-- Titolo principale -->
-        <h1>Diventa Assistente Bagnanti con SNS Albenga, Savona, Vado L., Finale L.</h1>
-
-        <!-- Descrizione introduttiva -->
-        <p>Formazione pratica e teorica per garantire la sicurezza in mare, piscine e acque interne.</p>
-
-        <!-- Pulsanti principali -->
         <div class="hero-buttons">
-            <a href="#corsi" class="btn-primary">Scopri i Corsi</a>
-            <a href="#contatti" class="btn-secondary">Contattaci</a>
+            <a href="#calendario" class="btn-primary"><i class="fas fa-calendar-alt"></i> Date Corsi & Rinnovi</a>
+            <a href="#corsi" class="btn-secondary"><i class="fas fa-graduation-cap"></i> I Nostri Corsi</a>
         </div>
-
-        <!-- Info istruttore e contatti -->
-        <p>📌 Allenatori: Wilder Cavallera - Daniele Alberigo</p>
-        <p>📍 Lungomare Doria 1, 17031 Albenga (SV) </p>
-        <p>📍 Sede operativa presso Piscina Comunale Albenga - Via Amalfi 1</p>
-        <p>☎️ <a href="tel:+39 3715428243">+39 3715428243</a></p>
-        <p>✉️ <a href="mailto:salvamentoalbenga@gmail.com">salvamentoalbenga@gmail.com</a></p>
-
     </div>
 </section>
 
-<!--
-================================================================================
- CARSELLO SECTION
-================================================================================
+<!-- QUICK INFO BAR (DESKTOP CARDS) -->
+<section class="quick-info-bar">
+    <div class="info-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+            <h4>Sedi Principali</h4>
+            <p>Albenga: Lungomare Doria 1 / Piscina Comunale</p>
+            <p>Savona: Sede Operativa e Piscine autorizzate</p>
+        </div>
+    </div>
+    <div class="info-card">
+        <i class="fas fa-user-shield"></i>
+        <div>
+            <h4>Allenatori Federali</h4>
+            <p>Wilder Cavallera • Daniele Alberigo</p>
+        </div>
+    </div>
+    <div class="info-card">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+            <h4>Contatto Rapido</h4>
+            <p><a href="tel:+393715428243">+39 371 542 8243</a></p>
+            <p><a href="mailto:salvamentoalbenga@gmail.com">salvamentoalbenga@gmail.com</a></p>
+        </div>
+    </div>
+</section>
 
--->
-<!-- ===== CAROSELLO ===== -->
+<!-- CAROSELLO -->
 <section class="carousel">
-  
   <div class="carousel-inner">
     <div class="slide">
       <img src="img/carosello1.jpg" alt="Corso in mare">
@@ -83,117 +99,278 @@ e contatti diretti (telefono e mail). Il layout è centrato e usa una hero image
       <img src="img/carosello9.jpg" alt="Soccorso in piscina">
     </div>
   </div>
-  <button class="prev" onclick="moveSlide(-1)">❮</button>
-  <button class="next" onclick="moveSlide(1)">❯</button>
+  <button class="prev" aria-label="Precedente" onclick="moveSlide(-1)">❮</button>
+  <button class="next" aria-label="Successivo" onclick="moveSlide(1)">❯</button>
 </section>
 
+<!-- =========================================================================
+     NUOVA SEZIONE CALENDARIO DATE (CORSI + RINNOVI)
+========================================================================= -->
+<section class="schedule-section" id="calendario">
+    <div class="section-header">
+        <span class="badge-tag">Stagione Ufficiale</span>
+        <h2>Calendario Corsi & Prove di Rinnovo Brevetti</h2>
+        <p class="section-lead">Consulta le date stabilite per le prove d'ammissione, l'inizio dei corsi e le sessioni di rinnovo brevetto per le sedi di <strong>Albenga</strong> e <strong>Savona</strong>.</p>
+    </div>
 
+    <!-- TAB 1: CORSI ASSISTENTE BAGNANTI -->
+    <div class="calendar-block">
+        <div class="block-title">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Date Corsi Assistente Bagnanti</h3>
+        </div>
 
-<!--
-================================================================================
- CORSI SECTION
-================================================================================
-Elenco dei corsi offerti. Ogni corso è rappresentato da una "card" con icona, titolo,
-breve descrizione e pulsante "Dettagli" che rimanda alla sezione dei dettagli.
--->
-<!-- Corsi Section -->
-<section class="courses" id="corsi">
-    <h2>I Nostri Corsi</h2>
-    <div class="course-list">
+        <div class="desktop-dual-grid">
+            <!-- ALBENGA CORSI -->
+            <div class="schedule-card">
+                <div class="card-header-bar albenga">
+                    <h4><i class="fas fa-map-pin"></i> Sezione Albenga</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Sessione</th>
+                                <th>Prova d'Ammissione</th>
+                                <th>Inizio Corso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="session-pill">Sessione Invernale</span></td>
+                                <td><strong>09/02/2027</strong></td>
+                                <td>18/02/2027</td>
+                            </tr>
+                            <tr>
+                                <td><span class="session-pill">Sessione Primaverile</span></td>
+                                <td><strong>06/05/2027</strong></td>
+                                <td>14/06/2027</td>
+                            </tr>
+                            <tr class="full-immersion-row">
+                                <td>
+                                    <span class="session-pill highlight">Full Immersion</span>
+                                    <small class="pill-sub">Durata 2 settimane (Min. 5 part.)</small>
+                                </td>
+                                <td><strong>24/06/2027</strong></td>
+                                <td><strong>26/07/2027</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="session-pill">Sessione Autunnale</span></td>
+                                <td><strong>28/09/2027</strong></td>
+                                <td>12/10/2027</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        <!-- Corso MIP -->
-        <a href="#corso-mip" class="course-item" aria-label="Dettagli Corso MIP – Assistente Bagnanti">
-            <i class="fas fa-swimmer fa-2x icon-animate"></i>
-            <h3>Corso MIP</h3>
-            <p>Assistente Bagnanti per Mare, acque interne e piscina.</p>
-        </a>
+            <!-- SAVONA CORSI -->
+            <div class="schedule-card">
+                <div class="card-header-bar savona">
+                    <h4><i class="fas fa-map-pin"></i> Sezione Savona</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Sessione</th>
+                                <th>Prova d'Ammissione</th>
+                                <th>Inizio Corso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="session-pill">Sessione Invernale</span></td>
+                                <td><strong>15/02/2027</strong></td>
+                                <td>23/02/2027</td>
+                            </tr>
+                            <tr>
+                                <td><span class="session-pill">Sessione Autunnale</span></td>
+                                <td><strong>27/09/2027</strong></td>
+                                <td>11/10/2027</td>
+                            </tr>
+                            <tr class="info-note-row">
+                                <td colspan="3">
+                                    <i class="fas fa-info-circle"></i> Disponibilità corsi <strong>Full Immersion</strong> (2 settimane - minimo 5 partecipanti) su richiesta anche per la sede di Savona.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Corso IP -->
-        <a href="#corso-ip" class="course-item" aria-label="Dettagli Corso IP – Assistente Bagnanti Acque Interne">
-            <i class="fas fa-water fa-2x icon-animate"></i>
-            <h3>Corso Piscina</h3>
-            <p>Assistente Bagnanti per piscine.</p>
-        </a>
+    <!-- TAB 2: PROVE RINNOVO BREVETTI -->
+    <div class="calendar-block">
+        <div class="block-title">
+            <i class="fas fa-id-card-alt"></i>
+            <h3>Prove Rinnovo Brevetti (Scaduti da meno di 5 anni)</h3>
+        </div>
 
-        <!-- Rinnovo Brevetto -->
-        <a href="#rinnovo-brevetto" class="course-item" aria-label="Dettagli Rinnovo Brevetto Assistente Bagnanti">
-            <i class="fas fa-id-card fa-2x icon-animate"></i>
-            <h3>Rinnovo Brevetto</h3>
-            <p>Sessioni di aggiornamento e rinnovo del brevetto.</p>
-        </a>
+        <div class="desktop-dual-grid">
+            <!-- ALBENGA RINNOVI -->
+            <div class="schedule-card">
+                <div class="card-header-bar albenga">
+                    <h4><i class="fas fa-swimming-pool"></i> Albenga (Piscina Comunale)</h4>
+                </div>
+                <ul class="dates-grid-list">
+                    <li><span class="day-badge">Giovedì</span> <span class="date-text">07/01/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">22/01/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">12/02/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">12/03/2027</span></li>
+                    <li><span class="day-badge">Sabato</span> <span class="date-text">10/04/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">16/04/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">30/04/2027</span></li>
+                    <li><span class="day-badge">Sabato</span> <span class="date-text">08/05/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">28/05/2027</span></li>
+                    <li><span class="day-badge">Venerdì</span> <span class="date-text">04/06/2027</span></li>
+                    <li><span class="day-badge">Sabato</span> <span class="date-text">05/06/2027</span></li>
+                    <li><span class="day-badge">Giovedì</span> <span class="date-text">04/11/2027</span></li>
+                    <li><span class="day-badge">Giovedì</span> <span class="date-text">09/12/2027</span></li>
+                </ul>
+            </div>
 
+            <!-- SAVONA RINNOVI -->
+            <div class="schedule-card">
+                <div class="card-header-bar savona">
+                    <h4><i class="fas fa-swimming-pool"></i> Savona</h4>
+                </div>
+                <ul class="dates-grid-list">
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">25/01/2027</span></li>
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">15/02/2027</span></li>
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">15/03/2027</span></li>
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">19/04/2027</span></li>
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">10/05/2027</span></li>
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">07/06/2027</span></li>
+                    <li><span class="day-badge">Lunedì</span> <span class="date-text">14/06/2027</span></li>
+                    <li><span class="day-badge">Mercoledì</span> <span class="date-text">10/11/2027</span></li>
+                    <li><span class="day-badge">Mercoledì</span> <span class="date-text">15/12/2027</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 3: BREVETTI SCADUTI DA OLTRE 5 ANNI -->
+    <div class="calendar-block alert-block">
+        <div class="block-title">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Prove Rinnovo Brevetti Scaduti da Oltre 5 Anni</h3>
+        </div>
+        <div class="over-five-box">
+            <p class="over-note">
+                <strong>Attenzione:</strong> per brevetti scaduti da oltre un quinquennio è obbligatorio sostenere le prove complete equiparate al corso di prima abilitazione.
+            </p>
+            <div class="dates-row">
+                <div class="date-tag-card">
+                    <i class="far fa-calendar-check"></i>
+                    <span><strong>Venerdì</strong> 02/04/2027</span>
+                </div>
+                <div class="date-tag-card">
+                    <i class="far fa-calendar-check"></i>
+                    <span><strong>Sabato</strong> 15/05/2027</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- SEZIONE CORSI -->
+<section class="courses" id="corsi">
+    <h2>I Nostri Corsi di Formazione</h2>
+    <div class="course-list">
+        <a href="#corso-mip" class="course-item" aria-label="Dettagli Corso MIP">
+            <div class="course-icon-wrap"><i class="fas fa-swimmer"></i></div>
+            <h3>Corso MIP</h3>
+            <p>Assistente Bagnanti completo per Mare, Acque Interne e Piscina.</p>
+            <span class="item-link">Scopri dettagli <i class="fas fa-arrow-right"></i></span>
+        </a>
 
+        <a href="#corso-ip" class="course-item" aria-label="Dettagli Corso Piscina">
+            <div class="course-icon-wrap"><i class="fas fa-water"></i></div>
+            <h3>Corso Piscina</h3>
+            <p>Assistente Bagnanti specializzato per impianti natatori e parchi acquatici.</p>
+            <span class="item-link">Scopri dettagli <i class="fas fa-arrow-right"></i></span>
+        </a>
 
-<!--
-================================================================================
- DETTAGLI CORSI
-================================================================================
-Ogni corso ha una sezione dedicata con card che include:
-- Icona identificativa
-- Descrizione dettagliata
-- Requisiti
-- Programma/Procedura
-- Durata
--->
+        <a href="#rinnovo-brevetto" class="course-item" aria-label="Dettagli Rinnovo">
+            <div class="course-icon-wrap"><i class="fas fa-id-card"></i></div>
+            <h3>Rinnovo Brevetto</h3>
+            <p>Sessioni periodiche di esame pratico, teoria e aggiornamento BLSD.</p>
+            <span class="item-link">Scopri dettagli <i class="fas fa-arrow-right"></i></span>
+        </a>
+    </div>
+</section>
+
+<!-- DETTAGLI CORSI -->
 <section class="course-details" id="corso-mip">
-    <h2>Corso MIP – Assistente Bagnanti <strong>M</strong>are, Acque <strong>I</strong>nterne e <strong>P</strong>iscine</h2>
+    <h2>Corso MIP – Mare, Acque Interne e Piscine</h2>
     <div class="card">
         <div class="card-icon foto1">
             <i class="fas fa-swimmer fa-4x"></i>
         </div>
         <div class="card-body">
             <h3>Descrizione</h3>
-            <p>Il Corso MIP abilita all'esercizio della professione di Assistente Bagnanti in mare, acque interne e piscina. Comprende moduli teorici e pratici, oltre a un tirocinio presso strutture autorizzate.</p>
+            <p>Il Corso MIP abilita all'esercizio della professione di Assistente Bagnanti in qualsiasi ambiente acquatico. Comprende moduli teorici, pratici in vasca e in mare con voga, oltre a un tirocinio formativo.</p>
 
-            <h3>Requisiti</h3>
-            <ul>
-                <li>Età tra 16 e 50 anni</li>
-                <li>Certificato di idoneità all'attività sportiva non agonistica o agonistica</li>
-                <li>Aver terminato il ciclo di scuola secondaria di primo grado (scuole medie)</li>
-            </ul>
-
-            <h3>Programma</h3>
-            <ul>
-              <li>Moduli teorici su sicurezza, tecniche di salvataggio e primo soccorso</li>
-              <li>Sessioni pratiche in piscina e in mare</li>
-              <li>tirocinio presso strutture autorizzate</li>
-            </ul>
+            <div class="specs-grid">
+                <div>
+                    <h3>Requisiti</h3>
+                    <ul>
+                        <li>Età compresa tra 16 e 50 anni</li>
+                        <li>Certificato di idoneità all'attività sportiva (non agonistica o agonistica)</li>
+                        <li>Diploma di scuola secondaria di primo grado (scuola media)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Programma Didattico</h3>
+                    <ul>
+                        <li>Sicurezza balneare, ordinanze marittime e primo soccorso con BLSD</li>
+                        <li>Sessioni pratiche in piscina e uscite con imbarcazione di salvataggio (pattino/voga)</li>
+                        <li>Tirocinio pratico presso stabilimenti balneari e strutture convenzionate</li>
+                    </ul>
+                </div>
+            </div>
             
-            <h3>Durata</h3>
-            <p>20 settimane - 100 ore - 38 lezioni</p>
+            <div class="duration-box">
+                <strong><i class="far fa-clock"></i> Durata:</strong> 20 settimane — 100 ore complessive — 38 lezioni
+            </div>
         </div>
     </div>
 </section>
 
 <section class="course-details" id="corso-ip">
-    <h2>Corso Piscina – Assistente Bagnanti per piscina e parchi acquatici</h2>
+    <h2>Corso Piscina – Impianti Natatori e Parchi Acquatici</h2>
     <div class="card">
         <div class="card-icon foto2">
             <i class="fas fa-water fa-4x"></i>
         </div>
         <div class="card-body">
             <h3>Descrizione</h3>
-            <p>Il Corso Piscina prepara all'attività di Assistente Bagnanti in piscina, con focus su sicurezza e tecniche specifiche per ambienti non marini.</p>
+            <p>Il Corso Piscina prepara all'attività di Assistente Bagnanti con focus specifico sulla gestione della sicurezza e salvataggio in ambienti natatori confinati.</p>
 
-            <h3>Requisiti</h3>
-            <ul>
-                <li>Età tra 16 e 50 anni</li>
-                <li>Certificato di idoneità all'attività sportiva non agonistica o agonistica</li>
-                <li>Aver terminato il ciclo di scuola secondaria di primo grado (scuole medie)</li>
-            </ul>
+            <div class="specs-grid">
+                <div>
+                    <h3>Requisiti</h3>
+                    <ul>
+                        <li>Età tra 16 e 50 anni</li>
+                        <li>Certificato medico sportivo in corso di validità</li>
+                        <li>Scuola secondaria di primo grado terminata</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Programma</h3>
+                    <ul>
+                        <li>Normative igienico-sanitarie e regolamenti piscine</li>
+                        <li>Valutazione dei rischi e tecniche di recupero e trasporto in vasca</li>
+                        <li>Protocolli di rianimazione cardio-polmonare</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h3>Programma</h3>
-            <ul>
-                <li>Normative specifiche per piscina</li>
-                <li>Analisi dei rischi e misure di sicurezza</li>
-                <li>Tecniche di salvataggio in ambienti non marini</li>
-            </ul>
-
-            <h3>Durata</h3>
-            <p>14 settimane - 70 ore - 28 lezioni</p>
+            <div class="duration-box">
+                <strong><i class="far fa-clock"></i> Durata:</strong> 14 settimane — 70 ore — 28 lezioni
+            </div>
         </div>
     </div>
 </section>
@@ -205,238 +382,183 @@ Ogni corso ha una sezione dedicata con card che include:
             <i class="fas fa-id-card fa-4x"></i>
         </div>
         <div class="card-body">
-            <h3>Descrizione</h3>
-            <p>Il rinnovo del brevetto è necessario per continuare a esercitare l'attività di Assistente Bagnanti. Include una prova pratica, aggiornamento delle competenze e verifica dei requisiti sanitari.</p>
+            <h3>Descrizione & Validità</h3>
+            <p>Il brevetto ha validità di <strong>5 anni</strong>. Il rinnovo richiede una prova pratica in piscina, la verifica sanitaria e la convalida del brevetto BLSD.</p>
 
-            <h3>Requisiti</h3>
-            <ul>
-                <li>Certificato di idoneità all'attività sportiva non agonistica o agonistica</li>
-                <li>Brevetto BLSD valido</li>
-                <li>Superamento di una prova pratica</li>
-                <li>Nessun limite di età</li>
-            </ul>
+            <h3>Prove Pratiche di Idoneità</h3>
+            <ol class="swim-tests-list">
+                <li>150 metri stile libero continuativi in max 3 minuti</li>
+                <li>50 metri stile libero in max 55 secondi</li>
+                <li>50 metri dorso in max 1 minuto e 5 secondi</li>
+                <li>50 metri rana in max 1 minuto e 15 secondi</li>
+                <li>12,5 metri nuoto subacqueo in apnea</li>
+                <li>20 secondi galleggiamento verticale statico con testa e mani fuori dall'acqua</li>
+                <li>Tuffo di testa da bordo vasca</li>
+            </ol>
 
-            <h3>Procedura</h3>
-            <ul>
-                <li>Compilazione della domanda di rinnovo sul portale della Sezione Nazionale di Salvamento</li>
-                <li>Presentazione dei documenti richiesti</li>
-                <li>Superamento della prova pratica di rinnovo</li>
-                
-            </ul>
-
-               <h3>Prove da superare</h3>
-            <ul> 
-               <li>1 - Nuotare consecutivamente per 150 metri con tecnica libera in un tempo massimo di 3 minuti</li>
-               <li>2 - Nuotare consecutivamente per 50 metri nello stile libero nel tempo massimo di 55 secondi</li>
-               <li>3 - Nuotare consecutivamente per 50 metri nello stile dorso nel tempo massimo di 1 minuto e 5 secondi</li>
-               <li>4 - Nuotare consecutivamente per 50 metri nello stile rana nel tempo massimo di 1 minuto e 15 secondi</li>
-               <li>5 - Nuotare consecutivamente sott’acqua per 12,5 metri</li>
-               <li>6 - Restare 20” in posizione verticale in acqua con la testa e le mani fuori dall’acqua</li>
-               <li>7 - Tuffarsi di testa dal bordo vasca</li>
-               <li><strong>I brevetti scaduti da oltre 5 anni dovranno sostenere le stesse prove del corso di prima abilitazione</strong> </li>
-            </ul>
-
-            <h3>Validità</h3>
-            <p>5 anni</p>
+            <p class="alert-text"><i class="fas fa-exclamation-circle"></i> I brevetti scaduti da oltre 5 anni sostengono l'intero programma d'esame di prima abilitazione.</p>
         </div>
     </div>
 </section>
 
-
-<!--
-================================================================================
- PERCHÉ SNS ALBENGA
-================================================================================
-Elenco dei punti di forza della sezione locale. Nessuna icona puntini standard, solo testo.
--->
+<!-- PERCHÉ SCEGLIERE NOI -->
 <section class="why-sns">
-    <h2>Perché Scegliere SNS Albenga</h2>
-    <ul>
-        <li>Formazione pratica in piscina e in mare</li>
-        <li>Allenatori qualificati e con esperienza</li>
-        <li>Supporto continuo durante e dopo il corso</li>
-        <li>Rete territoriale e opportunità lavorative stagionali</li>
-    </ul>
-</section>
-
-
-<!--
-================================================================================
- ORDINANZE / SICUREZZA
-================================================================================
-Sezione dedicata alle informazioni di sicurezza e link alle ordinanze locali.
--->
-<section class="ordinanze" id="ordinanze">
-    <h2>Sicurezza in Spiaggia & Ordinanze Locali</h2>
-    <a href="https://www.guardiacostiera.gov.it/portale/documents/315243/1114544/Ord.+n.+43+del+08.05.2026+Ordinanza+di+sicurezza+balneare.pdf/8f44d247-b15f-2e49-ff38-eb9a2dec0009?version=1.0&t=1778223856246null&" class="btn-primary">Consulta le Ordinanze Loano-Albenga</a>
-    <a href="https://www.guardiacostiera.gov.it/portale/documents/315082/0/ordinanza+49+del+06+05+2026+ordinanza+di+sicurezza+balneare.pdf/5e594cfe-fdbd-169b-2a06-2896a4601815?version=1.0&t=1778084478308null&" class="btn-primary">Consulta le Ordinanze Savona</a>
-    <p>Nota informativa: distanze aggiornate tra surfisti e bagnanti per la stagione estiva.</p>
-    <!--aggiungere savona-->
-</section>
-
-
-<!--
-================================================================================
- CHI SIAMO
-================================================================================
-Informazioni sulla sezione locale SNS Albenga, indirizzo, contatti e pulsanti centrati.
--->
-<section class="about" id="chi-siamo">
-    <h2>Chi Siamo</h2>
-    <p>Siamo la sezione locale della Società Nazionale di Salvamento, storica realtà italiana dedicata alla prevenzione degli incidenti in acqua e alla formazione professionale dal XIX secolo.</p>
-    <p>📍 Lungomare Doria 1, 17031 Albenga (SV)</p>
-    <p>📍 Sede operativa presso Piscina Comunale Albenga - Via Amalfi 1</p>
-    <p>☎️ <a href="tel:+393715428243">+ 393715428243</a></p>
-    <p>✉️ <a href="mailto:salvamentoalbenga@gmail.com"> salvamentoalbenga@gmail.com </a></p>
-    <p>- Direttore sezione: Enrico Schiappapietra</p>
-    <p>- Vice direttore: Paolo Gargiulo</p>
-    <p>- Direttore corsi: Wilder Cavallera</p>
-    <p>- Allenatori: Wilder Cavallera - Daniele Alberigo</p>
-    <div class="center-buttons">
-        <a href="tel:+39 3715428243" class="btn-primary">Chiama Ora</a>
+    <h2>Perché Scegliere SNS Albenga e Savona</h2>
+    <div class="features-grid">
+        <div class="feat-card">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Esperienza Storica</h4>
+            <p>La Società Nazionale di Salvamento forma bagnini in Italia dal 1871 con standard riconosciuti a livello internazionale.</p>
+        </div>
+        <div class="feat-card">
+            <i class="fas fa-swimmer"></i>
+            <h4>Addestramento Reale</h4>
+            <p>Sessioni costanti in mare con imbarcazioni di salvataggio (pattini da voga) e simulazioni d'emergenza in vasca.</p>
+        </div>
+        <div class="feat-card">
+            <i class="fas fa-briefcase"></i>
+            <h4>Sbocchi di Lavoro</h4>
+            <p>Contatto diretto con le strutture balneari e i consorzi del litorale per l'impiego immediato nella stagione estiva.</p>
+        </div>
     </div>
 </section>
 
+<!-- ORDINANZE BALNEARI -->
+<section class="ordinanze" id="ordinanze">
+    <h2>Sicurezza in Spiaggia & Ordinanze Balneari</h2>
+    <p>Prendi visione delle disposizioni di sicurezza emesse dalle Capitanerie di Porto per il litorale ligure:</p>
+    <div class="btn-group-center">
+        <a href="https://www.guardiacostiera.gov.it/portale/documents/315243/1114544/Ord.+n.+43+del+08.05.2026+Ordinanza+di+sicurezza+balneare.pdf/8f44d247-b15f-2e49-ff38-eb9a2dec0009?version=1.0&t=1778223856246null&" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <i class="fas fa-file-pdf"></i> Ordinanza Balneare Loano - Albenga
+        </a>
+        <a href="https://www.guardiacostiera.gov.it/portale/documents/315082/0/ordinanza+49+del+06+05+2026+ordinanza+di+sicurezza+balneare.pdf/5e594cfe-fdbd-169b-2a06-2896a4601815?version=1.0&t=1778084478308null&" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <i class="fas fa-file-pdf"></i> Ordinanza Balneare Savona
+        </a>
+    </div>
+</section>
 
-<!--
-================================================================================
- CONTATTI / MODULO
-================================================================================
-Modulo contatti con campi obbligatori, selezione interesse e checkbox privacy.
--->
+<!-- CHI SIAMO -->
+<section class="about" id="chi-siamo">
+    <h2>Chi Siamo</h2>
+    <div class="about-content">
+        <p>Siamo la sezione locale della <strong>Società Nazionale di Salvamento</strong> per il Ponente Savonese, dedicata alla prevenzione degli incidenti in acqua, alla diffusione della cultura del mare e alla formazione certificata di bagnini professionali.</p>
+        
+        <div class="staff-grid">
+            <div class="staff-item"><strong>Direttore Sezione:</strong> Enrico Schiappapietra</div>
+            <div class="staff-item"><strong>Vice Direttore:</strong> Paolo Gargiulo</div>
+            <div class="staff-item"><strong>Direttore Corsi:</strong> Wilder Cavallera</div>
+            <div class="staff-item"><strong>Allenatori:</strong> Wilder Cavallera & Daniele Alberigo</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATTI -->
 <section class="contact" id="contatti">
-    <h2>Contattaci</h2>
+    <h2>Richiedi Informazioni o Iscriviti</h2>
     <form action="mailto:salvamentoalbenga@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="telefono" placeholder="Telefono">
-        <select name="interesse" required>
-            <option value="" disabled selected>Seleziona Interesse</option>
-            <option value="corso">Corso</option>
-            <option value="rinnovo">Rinnovo</option>
-            <option value="aziende">Info Aziende/Scuole</option>
-        </select>
-        <textarea name="messaggio" placeholder="Messaggio" required></textarea>
+        <div class="form-row">
+            <input type="text" name="nome" placeholder="Nome e Cognome *" required>
+            <input type="email" name="email" placeholder="Indirizzo Email *" required>
+        </div>
+        <div class="form-row">
+            <input type="tel" name="telefono" placeholder="Numero di Telefono">
+            <select name="interesse" required>
+                <option value="" disabled selected>Seleziona il Corso o Servizio *</option>
+                <option value="corso-mip">Corso MIP (Mare, Piscina, Acque Interne)</option>
+                <option value="corso-piscina">Corso Piscina</option>
+                <option value="rinnovo">Rinnovo Brevetto</option>
+                <option value="aziende">Convenzioni Scuole / Enti</option>
+            </select>
+        </div>
+        <textarea name="messaggio" placeholder="Scrivi il tuo messaggio o richiedi dettagli su una specifica data..." required></textarea>
         <label class="privacy-label">
             <input type="checkbox" name="privacy" required>
-            <span>Acconsento al trattamento dati (privacy)</span>
+            <span>Dichiaro di aver letto e accetto il trattamento dei dati personali per la gestione della richiesta.</span>
         </label>
-        <button type="submit">Invia</button>
+        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Invia Richiesta</button>
     </form>
 </section>
 
-
- <!-- SEZIONE FAQ -->
+<!-- FAQ -->
 <section id="faq">
   <h2>Domande Frequenti</h2>
 
   <div class="faq-item">
     <button class="faq-question">1. A quale età si può partecipare?</button>
     <div class="faq-answer">
-      <p>I corsi sono aperti dai candidati tra i 16 e i 50 anni.</p>
+      <p>I corsi sono aperti a tutti i candidati di età compresa tra i 16 e i 50 anni.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <button class="faq-question">2. Quali documenti servono per l’iscrizione?</button>
     <div class="faq-answer">
-      <p>Dopo aver superato la prova di ammissione, bisogna presentare un documento d'identità e il certificato medico sportivo non agonistico (o agonistico), e procedere all'iscrizione sul portale della Società Nazionale di Salvamento.</p>
+      <p>Superata la prova di ammissione, occorre fornire documento d'identità, codice fiscale, certificato medico sportivo (non agonistico o agonistico) ed effettuare la registrazione telematica sul portale della Società Nazionale di Salvamento.</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">3. Quante volte alla settimana si deve frequentare?</button>
+    <button class="faq-question">3. Quante volte alla settimana si frequenta il corso?</button>
     <div class="faq-answer">
-      <p>Sono previste, fino all'esame in piscina, tre lezioni alla settimana. Dopo si dovrà seguire la lezione settimanale di voga.</p>
+      <p>Fino all'esame pratico in piscina sono previste 3 lezioni a settimana. A seguire, si integra l'allenamento settimanale di voga in mare per chi sostiene il brevetto MIP.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <button class="faq-question">4. Quanto costa ogni corso?</button>
     <div class="faq-answer">
-      <p>Il corso per Assistente Bagnanti MIP costa indicativamente €550; quello per Assistente Bagnanti solo piscina €440.</p>
+      <p>Il corso per Assistente Bagnanti MIP ha un costo indicativo di 550€; il corso per solo piscina ammonta a circa 440€.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <button class="faq-question">5. Ci sono agevolazioni o crediti per gli studenti?</button>
     <div class="faq-answer">
-      <p>Sono previste agevolazioni in caso di convenzioni con l'istituto scolastico di appartenenza; l'attribuzione del credito formativo agli esami di stato della scuola secondaria di II grado è regolato dal D.P.R. 323/1998 e dal D.M. 49/2000.</p>
+      <p>Sì, sono previste convenzioni dedicate per gli studenti delle scuole superiori con rilascio di crediti formativi (D.P.R. 323/1998 e D.M. 49/2000).</p>
     </div>
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">6. Come mi posso iscrivere?</button>
+    <button class="faq-question">6. Il brevetto è valido per lavorare all'estero o su tutto il territorio nazionale?</button>
     <div class="faq-answer">
-      <p>Dopo aver sostenuto l'esame di ammissione ci si può iscrivere direttamente sul portale della Società Nazionale di Salvamento.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">7. Come si rinnova un brevetto scaduto e quali prove sono richieste?</button>
-    <div class="faq-answer">
-      <p>Per rinnovare il brevetto è necessario il certificato medico sportivo non agonistico o agonistico e l'autorizzazione BLSD rilasciata dal 118. Inoltre, si devono sostenere le seguenti prove in piscina: <br> 
-      - Nuotare 150 MT come si vuole in max 3 minuti  <br>
-      - Nuotare 50 MT stile libero in max 55 secondi  <br>
-      - Nuotare 50 MT dorso in max 1 min 5 sec  <br>
-      - Nuotare 50 MT rana in max 1 min 15 sec  <br>
-      - Rimanere minimo 20 sec fermi con mani e testa fuori dall'acqua  <br>
-      - Nuotare 12,5 MT sott'acqua  <br>
-      Verrà svolto un breve colloquio sulle procedure BLSD.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">8. Posso lavorare in tutta Italia una volta conseguito il brevetto?</button>
-    <div class="faq-answer">
-      <p>Il brevetto è valido su tutto il territorio nazionale.</p>
+      <p>Il brevetto SNS è valido su tutto il territorio della Repubblica Italiana ed è titolo preferenziale per concorsi e crediti formativi.</p>
     </div>
   </div>
 </section>
 
-
-
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
+    <div class="footer-container">
+        <div class="footer-logos">
+            <img src="img/logo_albenga.PNG" alt="Logo SNS Albenga">
+            <img src="img/logo-flat-square-salvamento2.png" alt="Logo SNS Nazionale">
+        </div>
 
-      <!-- Loghi sopra il footer -->
-    <div class="footer-logos">
-        <img src="img/logo_albenga.PNG" alt="Logo SNS Albenga">
-        <img src="img/logo-flat-square-salvamento2.png" alt="Logo SNS Nazionale">
+        <div class="footer-col">
+            <h3>Sedi Operative</h3>
+            <p>📍 Lungomare Doria 1, 17031 Albenga (SV)</p>
+            <p>📍 Piscina Comunale Albenga - Via Amalfi 1</p>
+            <p>📍 Sezione operativa Savona e comprensorio</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Recapiti</h3>
+            <p>☎️ <a href="tel:+393715428243">+39 371 542 8243</a></p>
+            <p>✉️ <a href="mailto:salvamentoalbenga@gmail.com">salvamentoalbenga@gmail.com</a></p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Canali Social</h3>
+            <p><a href="https://www.facebook.com/SalvamentoAlbenga/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+            <p><a href="https://www.instagram.com/salvamentoalbenga?igsh=MTdsMDExZmoyMjY1bg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+        </div>
     </div>
 
-    <!-- Contatti -->
-    <div class="footer-column">
-        <h3>Contatti</h3>
-        <p>📍 Lungomare Doria 1, Albenga</p>
-        <p>📍 Sede operativa presso Piscina Comunale Albenga - Via Amalfi 1</p>
-        <p>☎️ <a href="tel:+39 3715428243">+39 3715428243</a></p>
-        <p>✉️ <a href="mailto:salvamentoalbenga@gmail.com">salvamentoalbenga@gmail.com</a></p>
-    </div>
-
-    <!-- Social -->
-    <div class="footer-column">
-        <h3>Social</h3>
-        <a href="https://www.facebook.com/SalvamentoAlbenga/" target="_blank">
-            <i class="fab fa-facebook"></i> Facebook
-        </a><br>
-        <a href="https://www.instagram.com/salvamentoalbenga?igsh=MTdsMDExZmoyMjY1bg==" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-    </div>
-
-    
-
-    <!-- Privacy estesa sotto il footer -->
     <section class="footer-privacy">
-        <h3>Informativa Privacy</h3>
-        <p>
-            La Società Nazionale di Salvamento – Sezione di Albenga rispetta la normativa vigente sulla protezione dei dati personali (Regolamento UE 2016/679 – GDPR). 
-            I dati forniti vengono utilizzati esclusivamente per finalità informative e di contatto. 
-            Nessun dato viene condiviso con terzi. L’utente ha diritto di accedere, rettificare o richiedere la cancellazione dei propri dati contattando la Sezione.
-        </p>
+        <p>Società Nazionale di Salvamento – Sezione di Albenga, Savona, Vado Ligure e Finale Ligure | Trattamento dati ai sensi del Regolamento UE 2016/679 (GDPR).</p>
     </section>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
