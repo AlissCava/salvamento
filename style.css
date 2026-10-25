@@ -893,4 +893,55 @@ footer a:hover { color: #81d4fa; }
         font-size: 0.8rem;
         line-height: 1.3;
     }
+
+    /* Corsi assistente bagnanti: impilati su 1 colonna */
+    .dual-tables { 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    /* RINNOVI < 5 ANNI: AFFIANCATI SU 2 COLONNE SOLO SU SMARTPHONE */
+    .date-card:nth-of-type(2) .dual-tables,
+    .date-card:nth-child(2) .dual-tables {
+        grid-template-columns: 1fr 1fr; /* Affianca Albenga e Savona */
+        gap: 6px;
+    }
+
+    .date-card:nth-of-type(2) .table-wrapper,
+    .date-card:nth-child(2) .table-wrapper {
+        padding: 8px 4px;
+    }
+
+    .date-card:nth-of-type(2) .table-title,
+    .date-card:nth-child(2) .table-title {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    /* Date interne disposte su singola colonna per box per non tagliare il testo */
+    .date-card:nth-of-type(2) .dates-list,
+    .date-card:nth-child(2) .dates-list {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .date-card:nth-of-type(2) .dates-list li,
+    .date-card:nth-child(2) .dates-list li {
+        padding: 5px 4px;
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-left-width: 2px;
+    }
+
+    .date-card:nth-of-type(2) .dates-list li span,
+    .date-card:nth-child(2) .dates-list li span {
+        font-size: 0.7rem;
+    }
+
+    .date-card:nth-of-type(2) .dates-list li strong,
+    .date-card:nth-child(2) .dates-list li strong {
+        font-size: 0.75rem;
+    }
 }
